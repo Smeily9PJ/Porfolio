@@ -1,0 +1,16 @@
+/* Colors */
+/* Tailles */
+/* line 5, ../sass/Home.scss */
+.home_page .description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 14, ../sass/Home.scss */
+.home_page .contenu * {
+  display: inline;
+}
+/* line 24, ../sass/Home.scss */
+.home_page .conseil {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

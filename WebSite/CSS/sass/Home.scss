@@ -1,0 +1,28 @@
+﻿@import 'Variables';
+
+.home_page {
+
+    .description {
+        padding-top: $padding_text;
+        padding-bottom: $padding_text;
+    }
+
+    .video {
+    }
+
+    .contenu {
+         * {
+            display: inline;
+        }
+        .left {
+        }
+
+        .right {
+        }
+    }
+
+    .conseil {
+        padding-top: $padding_text;
+        padding-bottom: $padding_text;
+    }
+}

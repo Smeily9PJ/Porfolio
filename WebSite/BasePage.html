@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="fr" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Library/bootstrap.css" rel="stylesheet">
+    <!-- <link href="StyleSheet.css" rel="stylesheet">-->
+    <link href="/CSS/stylesheets/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="/Summernote/summernote.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/Home.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/Experience.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/Competence.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/Contact.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/Loisir.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/stylesheets/NavBarCustom.css" rel="stylesheet" type="text/css" />
+    <script src="Library/jquery-2.2.3.js"></script>
+    <script src="Library/bootstrap.js"></script>
+    <script src="Summernote/summernote.js"></script>
+    <script src="Library/angular.js"></script>
+    <script src="Library/angular-ui-router.js"></script>
+    <script src="JS/MenuController.js"></script>
+    <script src="JS/HomeController.js"></script>
+    <script src="JS/CompetenceController.js"></script>
+    <script src="JS/ExperienceController.js"></script>
+    <script src="JS/LoisirController.js"></script>
+    <script src="JS/ContactController.js"></script>
+    <script src="JS/Route.js"></script>
+    <script src="JS/app.js"></script>
+</head>
+<body ng-controller="MenuController">
+    <div class="header">
+    </div>
+    <div class="row">
+        <div class="body col-md-10 col-md-offset-1">
+            <ul class="custom-bar nav nav-tabs nav-justified ">
+                <li ng-repeat="menuItem in Menu.Items" ng-class="{
+                    '' : !menuItem.Active,
+                    'active' : menuItem.Active
+                 }">
+                    <a href="{{menuItem.Href}}" ng-click="Menu.Change($index)">{{menuItem.Name}}</a>
+                </li>
+            </ul>
+            <div class="main-content" ui-view></div>
+        </div>
+    </div>
+</body>
+</html>

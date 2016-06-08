@@ -1,0 +1,25 @@
+/* Colors */
+/* Tailles */
+/* line 4, ../sass/StyleSheet.scss */
+body {
+  background-color: #08050d;
+  color: white;
+}
+/* line 8, ../sass/StyleSheet.scss */
+body .header {
+  height: 100px;
+  background-image: url(../../Assets/banniere.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+/* line 15, ../sass/StyleSheet.scss */
+body .body {
+  border: 1px solid #9700ff;
+  padding-bottom: 50px;
+  background-color: #262626;
+}
+/* line 21, ../sass/StyleSheet.scss */
+body .main-content {
+  padding-left: 10px;
+  padding-right: 10px;
+}

@@ -1,0 +1,35 @@
+/* Colors */
+/* Tailles */
+/* line 4, ../sass/Contact.scss */
+.contact_page .text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 10, ../sass/Contact.scss */
+.contact_page .row label {
+  display: block;
+  text-align: right;
+  height: 25px;
+  margin-top: 4px !important;
+}
+/* line 17, ../sass/Contact.scss */
+.contact_page .row input {
+  width: 40%;
+  height: 25px;
+  margin-bottom: 4px !important;
+  margin-top: 4px !important;
+}
+/* line 24, ../sass/Contact.scss */
+.contact_page .row button {
+  float: right;
+}
+/* line 29, ../sass/Contact.scss */
+.contact_page .note-editing-area {
+  height: 200px !important;
+}
+@media only screen and (max-width: 1000px) {
+  /* line 34, ../sass/Contact.scss */
+  .contact_page label {
+    display: none !important;
+  }
+}

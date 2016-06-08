@@ -1,0 +1,32 @@
+﻿<div class="contact_page" ng-controller="ContactController">
+    <h2>Contact</h2>
+    <div class="contenu">
+        <div class="text"> Pour m'envoyer un mail, veuillez remplir le formulaire ci-dessous puis cliquez sur envoyer.</div>
+        <div class="formulaire">
+            <form>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="Entreprise">Entreprise : </label>
+                        <label for="Name">Nom Prénom : </label>
+                        <label for="Mail">Mail : </label>
+                        <label for="Objet">Objet : </label>
+                        <label for="summernote">Corp du mail : </label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="Entreprise" placeholder="Entreprise">
+                        <input type="text" class="form-control" id="Name" placeholder="Nom Prénom">
+                        <input type="email" class="form-control" id="Mail" placeholder="Mail">
+                        <input type="text" class="form-control" id="Objet" placeholder="Objet">
+                        <div id="summernote">Saisissez le corp du mail ici.</div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#summernote').summernote();
+    });
+</script>

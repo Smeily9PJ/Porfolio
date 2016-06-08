@@ -1,0 +1,25 @@
+﻿@import 'Variables';
+
+
+body {
+    background-color: $background_color;
+    color: $text_color;
+
+    .header {
+        height: $height_header;
+        background-image: url(../../Assets/banniere.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+
+    .body {
+        border: 1px solid $border_color;
+        padding-bottom: $height_header/2;
+        background-color: $background_color_body;
+    }
+
+    .main-content {
+        padding-left : 10px;
+        padding-right : 10px;
+    }
+}

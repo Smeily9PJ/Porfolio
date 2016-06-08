@@ -1,0 +1,48 @@
+/* Colors */
+/* Tailles */
+/* tab color */
+/* line 4, ../sass/NavBarCustom.scss */
+.nav-tabs > li > a {
+  background-color: #08050d;
+  border: 1px solid #9700ff !important;
+  color: white;
+}
+
+/* active tab color */
+/* line 12, ../sass/NavBarCustom.scss */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: white;
+  background-color: #262626;
+  border-color: #9700ff;
+  border-bottom: none !important;
+}
+
+/* hover tab color */
+/* line 20, ../sass/NavBarCustom.scss */
+.nav-tabs > li > a:hover {
+  border-color: #9700ff;
+  background-color: #230138;
+}
+
+/* line 25, ../sass/NavBarCustom.scss */
+.nav > li > a {
+  padding: 2px 15px;
+}
+
+/* line 29, ../sass/NavBarCustom.scss */
+.custom-bar {
+  margin-top: -27px;
+}
+/* line 32, ../sass/NavBarCustom.scss */
+.custom-bar * {
+  height: 25px !important;
+  padding-top: 2px;
+  border-top-left-radius: 1000px !important;
+  border-top-right-radius: 1000px !important;
+}
+
+/* line 40, ../sass/NavBarCustom.scss */
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+  border-bottom: none !important;
+  border-color: #9700ff;
+}
