@@ -5,12 +5,28 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 14, ../sass/Home.scss */
+/* line 12, ../sass/Home.scss */
+.home_page .video .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+/* line 19, ../sass/Home.scss */
+.home_page .video .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 29, ../sass/Home.scss */
 .home_page .contenu * {
   display: inline;
 }
-/* line 24, ../sass/Home.scss */
+/* line 34, ../sass/Home.scss */
 .home_page .conseil {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
 }

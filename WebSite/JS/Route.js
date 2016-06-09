@@ -10,9 +10,15 @@
           controller: 'HomeController',
           controllerAs: 'Home'
       })
-      .state('Menu1', {
+      .state('Experience', {
           url: '/experience',
           templateUrl: 'HTML/Experience.html',
+          controller: 'ExperienceController',
+          controllerAs: 'Experience'
+      })
+      .state('Experience.Contexte', {
+          url: '/experience/{refExperience}/contexte',
+          templateUrl: 'HTML/Experience.Contexte.html',
           controller: 'ExperienceController',
           controllerAs: 'Experience'
       })
