@@ -1,0 +1,40 @@
+/* Colors */
+/* Tailles */
+/* line 5, ../sass/Competence.scss */
+.page-competence .title > div {
+  display: inline-block;
+}
+/* line 9, ../sass/Competence.scss */
+.page-competence .title .checkbox-slider--b input + span:after {
+  background-color: #9700ff;
+}
+/* line 14, ../sass/Competence.scss */
+.page-competence .title .checkbox-slider--b input:checked + span:before {
+  background-color: #230138;
+}
+/* line 19, ../sass/Competence.scss */
+.page-competence .toggle {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+/* line 24, ../sass/Competence.scss */
+.page-competence .toggle span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* line 30, ../sass/Competence.scss */
+.page-competence .checkbox-slider--b input + span:before {
+  margin-left: 145px;
+}
+/* line 34, ../sass/Competence.scss */
+.page-competence .checkbox-slider--b input:checked + span:after,
+.page-competence .checkbox-slider--b input:checked + span:after {
+  margin-top: 20px;
+  margin-left: 165px;
+}
+/* line 40, ../sass/Competence.scss */
+.page-competence .checkbox-slider--b input + span:after,
+.page-competence .checkbox-slider--b input + span:after {
+  margin-top: 20px;
+  margin-left: 145px;
+}
