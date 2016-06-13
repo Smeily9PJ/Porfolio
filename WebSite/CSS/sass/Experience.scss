@@ -1,64 +1,31 @@
 ﻿@import 'Variables';
 
 .experience_page {
+    .experience {
+         padding-top: $padding_text;
+    }
+
+    .en-tete {
+        padding-top: $padding_text;
+        padding-bottom: $padding_text;
+    }
+
     .select-menu {
-        padding-right: 0px;
-        padding-left: 5px;
+        width: 99.05%;
+        padding-top: $padding_text;
+        margin: auto;
+        margin-bottom: -1px;
     }
 
     .content {
+        width: 99%;
         background-color: $background_color_body;
         border: 1px solid $border_color;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: $padding_text;
+        margin: auto;
     }
 
-    .panel {
-        border-color: $border_color;
-
-        .panel-heading {
-            color: $text_color;
-            background-color: $border_color_black;
-            border-color: $border_color;
-        }
-
-        .panel-body {
-            padding: 0px;
-            background-color: $background_color;
-
-            .non-active {
-                background-color: $background_color;
-                border: 1px solid $border_color;
-                border-top-left-radius: 1000px !important;
-                border-bottom-left-radius: 1000px !important;
-            }
-
-            .active {
-                background-color: $background_color_body;
-            }
-
-            .nav {
-                text-align: right;
-            }
-        }
-
-        .panel-heading + .panel-collapse > .panel-body {
-            border-top-color: $border_color;
-        }
-
-        li {
-
-            & > a {
-                color: $text_color;
-            }
-        }
-
-        li:hover, a:hover {
-            background-color: $background_color_hover !important;
-        }
-
-        .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-            background-color: $background_color_body;
-        }
+    .competences {
+        height: 25px;
     }
 }

@@ -25,23 +25,32 @@
 }
 
 /* line 25, ../sass/NavBarCustom.scss */
+a {
+  color: white;
+}
+/* line 28, ../sass/NavBarCustom.scss */
+a:hover {
+  color: #9700ff;
+}
+
+/* line 33, ../sass/NavBarCustom.scss */
 .nav > li > a {
   padding: 2px 15px;
 }
 
-/* line 29, ../sass/NavBarCustom.scss */
+/* line 37, ../sass/NavBarCustom.scss */
 .custom-bar {
   margin-top: -27px;
 }
-/* line 32, ../sass/NavBarCustom.scss */
+/* line 40, ../sass/NavBarCustom.scss */
 .custom-bar * {
   height: 25px !important;
   padding-top: 2px;
-  border-top-left-radius: 1000px !important;
-  border-top-right-radius: 1000px !important;
+  border-top-left-radius: 50px !important;
+  border-top-right-radius: 50px !important;
 }
 
-/* line 40, ../sass/NavBarCustom.scss */
+/* line 48, ../sass/NavBarCustom.scss */
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
   border-bottom: none !important;
   border-color: #9700ff;

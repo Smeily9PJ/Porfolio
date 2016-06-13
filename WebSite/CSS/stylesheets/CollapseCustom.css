@@ -1,0 +1,20 @@
+/* Colors */
+/* Tailles */
+/* line 3, ../sass/CollapseCustom.scss */
+.panel {
+  border-color: #9700ff;
+}
+/* line 6, ../sass/CollapseCustom.scss */
+.panel .panel-heading {
+  color: white;
+  background-color: #230138;
+  border-color: #9700ff;
+}
+/* line 12, ../sass/CollapseCustom.scss */
+.panel .panel-body {
+  background-color: #08050d;
+}
+/* line 16, ../sass/CollapseCustom.scss */
+.panel .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #9700ff;
+}

@@ -1,54 +1,82 @@
 ﻿<div class="experience_page" ng-controller="ExperienceController">
     <h2>Expériences</h2>
+    <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
+
     <div class="contenu">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
+                <div class="panel-heading" id="heading{{experience.Id}}">
                     <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-                            Expérience 1 : faire marche ce p$^*ù de truc
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{experience.Id}}" data-target="#collapse{{experience.Id}}">
+                            {{experience.Name}}
                         </a>
                     </h4>
                 </div>
-                <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                <div id="collapse{{experience.Id}}" aria-labelledby="heading{{experience.Id}}" class="panel-collapse collapse " ng-class="{
+                                        '' : experience.Id != Experiences.DefaultProject,
+                                        'in' : experience.Id == Experiences.DefaultProject
+                                     }">
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-2 select-menu">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li role="presentation" class="active"><a>Contexte</a></li>
-                                    <li role="presentation" class="non-active"><a>Description</a></li>
-                                    <li role="presentation" class="non-active"><a>Compétences liées</a></li>
+                        <div class="experience">
+                            <div class="select-menu">
+                                <ul class="custom-bar nav nav-tabs nav-justified ">
+                                    <li ng-class="{
+                                        'non-active' : experience.MenuActif != 0,
+                                        'active' : experience.MenuActif == 0
+                                     }" ng-click="experience.Change(0);">
+                                        <a>Contexte</a>
+                                    </li>
+                                    <li ng-class="{
+                                        'non-active' : experience.MenuActif != 1,
+                                        'active' : experience.MenuActif == 1
+                                     }" ng-click="experience.Change(1);">
+                                        <a>Description</a>
+                                    </li>
+                                    <li ng-class="{
+                                        'non-active' : experience.MenuActif != 2,
+                                        'active' : experience.MenuActif == 2
+                                     }" ng-click="experience.Change(2);">
+                                        <a>Compétences liées</a>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="col-md-10 content">
-                                <div id="contexte">
-                                    <p>contexte</p>
-                                    <p>
-                                        L'histoire se déroule dans un univers au bord de la crise.
-                                        Afin de rapprocher les différentes espèces intelligentes et de réguler le terrorisme interplanétaire, les plus puissantes planètes créent la Fédération Galactique, dont le nombre de planètes membres ne cesse de grossir.
-                                        Les « Chozos » (chōjin-zoku en VO (鳥人族 qui se lit « race d'homme oiseau »)), la race la plus intelligente connue de la galaxie, enseignent aux différentes civilisations quelques rudiments de leur technologie de pointe, afin de maintenir la stabilité de l'Univers.
-
-                                        De l'autre côté, les « pirates de l'espace », peuple nomade ultra-violent très avancé technologiquement, vivent de leurs pillages effectués par leurs armées suréquipées sur les autres planètes, et récupèrent petit à petit les secrets chozos disséminés dans la galaxie.
-                                        Les Chozos combattent ardemment les pirates, puis disparaissent totalement de la galaxie, laissant derrière eux leurs colonies en ruines. Que leur est-il arrivé ? Pourquoi les représentants de ce peuple éparpillé aux quatre coins de l'Univers ont-ils tous disparu en même temps ? Les recherches de la Fédération Galactique sont vaines, et ces derniers restent seuls face aux pirates.
-                                        Certaines des prophéties chozos retrouvées prétendent tout de même que leur peuple attend la venue de l'« Élu » de la lumière, équipé de leurs armes et armure, qui achèvera leur œuvre.
-
-                                        Le temps passa et l'Élu ne vint pas. Toute la bordure extérieure de la galaxie est maintenant sous le joug des pirates de l'espace qui se sont relancés sur les dernières études des Chozos au sujet des armes biologiques.
-                                        Sur la petite colonie terrienne K-2L naît Samus Aran.
-                                        Alors que cette dernière est âgée de 3 ans, la colonie est attaquée par un escadron scientifique des pirates de l'Espace. La police galactique sur place tente de résister, mais est balayée par la nouvelle « recrue » des pirates ici à l'essai : Ridley.
-                                        La famille de Samus est massacrée ainsi que tous les habitants de K-2L, excepté Samus Aran elle-même, cachée par sa mère. Cette dernière est recueillie après le drame par deux Chozos rescapés, arrivés trop tard. Ces derniers la ramènent sur la dernière planète chozo, Zebes, où ils la forment comme un guerrier chozo.
-                                        Une dizaine d'années plus tard, Samus achève son entraînement et se voit confier un Costume de Puissance sur mesure, le seul de toute l'Histoire Galactique. (Il apparaît dans le second volume du E-manga que Mother Brain était une intelligence artificielle créée par les Chozos et qui leur servait d'ordinateur central, d'interface planétaire, sur la planète Zebes. Par la suite et sans qu'on ait encore d'explication, Mother Brain deviendra le chef des pirates de l'espace.)
-
-                                        Samus, dans le but d'éliminer la menace pirate afin de venger ses parents, devient un Space Hunter, un des mercenaires de la Fédération galactique. Cependant, une de ses missions la ramènera sur Zebes, à présent en ruine, afin d'y effectuer sa « Mission zéro », car les pirates de l'espace, dans leur soif de pouvoir, viennent de réveiller une ancienne malédiction : les Métroïdes…
-
-                                        La trame scénaristique de la série ainsi que certains éléments de l'histoire semblent fortement inspirés ou similaires à l'univers des films de science-fiction Alien. C'est d'ailleurs pour cela qu'un boss du jeu s'appelle Ridley (référence à Ridley Scott).
-                                        Les Chozos disent être morts à cause d'un poison qui occupera le devant de la scène dans toute la saga Prime, le phazon.
-                                    </p>
+                            <div class="content">
+                                <div ng-show="experience.MenuActif == 0">
+                                    <h3>Contexte</h3>
+                                    <div>
+                                        {{experience.Contexte}}
+                                    </div>
                                 </div>
-                                <div id="description">
-                                    description
+                                <div ng-show="experience.MenuActif == 1">
+                                    <h3>Description</h3>
+                                    <div>
+                                        {{experience.Description}}
+                                    </div>
                                 </div>
-                                <div id="competence">
-                                    competence
+                                <div ng-show="experience.MenuActif == 2">
+                                    <h3>Compétences liées</h3>
+                                    <div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Compétences humaines</div>
+                                            <div class="panel-body">
+                                                <div class="competences" ng-repeat="competenceHumaine in experience.CompetencesHumaines">
+                                                    <a>
+                                                        {{competenceHumaine.Libelle}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Compétences techniques</div>
+                                            <div class="panel-body">
+                                                <div class="competences" ng-repeat="competenceTechnique in experience.CompetencesTechniques">
+                                                    <a>
+                                                        {{competenceTechnique.Libelle}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -56,6 +84,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>

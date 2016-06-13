@@ -22,6 +22,14 @@
   background-color: $background_color_hover;
 }
 
+a{
+    color: $text_color;
+
+    &:hover {
+        color: $border_color;
+    }
+}
+
 .nav > li > a {
     padding: 2px 15px;
 }
@@ -32,8 +40,8 @@
         & * {
             height: 25px !important;
             padding-top: 2px;
-            border-top-left-radius: 1000px !important;
-            border-top-right-radius: 1000px !important;
+            border-top-left-radius: 50px !important;
+            border-top-right-radius: 50px !important;
         }
 }
 

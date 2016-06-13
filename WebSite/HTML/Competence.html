@@ -1,11 +1,17 @@
 ﻿<div ng-controller="CompetenceController">
     <h2>Compétences</h2>
     <div class="row">
-        <div class="col-md-2 col-md-offset-3">
-            <button class="btn btn-primary btn-lg">Humaines</button>
-        </div>
-        <div class="col-md-2 col-md-offset-2">
-            <button class="btn btn-primary btn-lg">Techniques</button>
+        <div class="btn-group" data-toggle="buttons">
+            <div class="col-md-2 col-md-offset-3">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" autocomplete="off" checked> Humaines
+                </label>
+            </div>
+            <div class="col-md-2 col-md-offset-2">
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" autocomplete="off"> Techniques
+                </label>
+            </div>
         </div>
     </div>
 </div>

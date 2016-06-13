@@ -7,37 +7,36 @@
       .state('home', {
           url: '/',
           templateUrl: 'HTML/home.html',
-          controller: 'HomeController',
-          controllerAs: 'Home'
+          controller: HomeController
       })
       .state('Experience', {
           url: '/experience',
           templateUrl: 'HTML/Experience.html',
-          controller: 'ExperienceController',
-          controllerAs: 'Experience'
+          controller: ExperienceController
       })
-      .state('Experience.Contexte', {
-          url: '/experience/{refExperience}/contexte',
-          templateUrl: 'HTML/Experience.Contexte.html',
-          controller: 'ExperienceController',
-          controllerAs: 'Experience'
+      .state('Experience.detail', {
+          url: '/experience/{refExperience}',
+          templateUrl: 'HTML/Experience.html',
+          controller: ExperienceController
       })
       .state('Competence', {
           url: '/competence',
           templateUrl: 'HTML/Competence.html',
-          controller: 'CompetenceController',
-          controllerAs: 'Competence'
+          controller: CompetenceController
+      })
+      .state('Competence.detail', {
+          url: '/competence/{refCompetence}',
+          templateUrl: 'HTML/Competence.html',
+          controller: CompetenceController
       })
       .state('loisir', {
           url: '/loisir',
           templateUrl: 'HTML/Loisir.html',
-          controller: 'LoisirController',
-          controllerAs: 'Loisir'
+          controller: LoisirController
       })
       .state('contact', {
           url: '/contact',
           templateUrl: 'HTML/Contact.html',
-          controller: 'ContactController',
-          controllerAs: 'Contact'
+          controller: ContactController
       });
 }

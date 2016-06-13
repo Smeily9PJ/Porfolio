@@ -1,0 +1,19 @@
+﻿@import 'Variables';
+
+.panel {
+    border-color: $border_color;
+
+    .panel-heading {
+        color: $text_color;
+        background-color: $border_color_black;
+        border-color: $border_color;
+    }
+
+    .panel-body {
+        background-color: $background_color;
+    }
+
+    .panel-heading + .panel-collapse > .panel-body {
+        border-top-color: $border_color;
+    }
+}

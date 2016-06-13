@@ -1,60 +1,30 @@
 /* Colors */
 /* Tailles */
 /* line 4, ../sass/Experience.scss */
-.experience_page .select-menu {
-  padding-right: 0px;
-  padding-left: 5px;
+.experience_page .experience {
+  padding-top: 10px;
 }
-/* line 9, ../sass/Experience.scss */
-.experience_page .content {
-  background-color: #262626;
-  border: 1px solid #9700ff;
+/* line 8, ../sass/Experience.scss */
+.experience_page .en-tete {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 16, ../sass/Experience.scss */
-.experience_page .panel {
-  border-color: #9700ff;
+/* line 13, ../sass/Experience.scss */
+.experience_page .select-menu {
+  width: 99.05%;
+  padding-top: 10px;
+  margin: auto;
+  margin-bottom: -1px;
 }
-/* line 19, ../sass/Experience.scss */
-.experience_page .panel .panel-heading {
-  color: white;
-  background-color: #230138;
-  border-color: #9700ff;
-}
-/* line 25, ../sass/Experience.scss */
-.experience_page .panel .panel-body {
-  padding: 0px;
-  background-color: #08050d;
-}
-/* line 29, ../sass/Experience.scss */
-.experience_page .panel .panel-body .non-active {
-  background-color: #08050d;
+/* line 20, ../sass/Experience.scss */
+.experience_page .content {
+  width: 99%;
+  background-color: #262626;
   border: 1px solid #9700ff;
-  border-top-left-radius: 1000px !important;
-  border-bottom-left-radius: 1000px !important;
+  padding: 10px;
+  margin: auto;
 }
-/* line 36, ../sass/Experience.scss */
-.experience_page .panel .panel-body .active {
-  background-color: #262626;
-}
-/* line 40, ../sass/Experience.scss */
-.experience_page .panel .panel-body .nav {
-  text-align: right;
-}
-/* line 45, ../sass/Experience.scss */
-.experience_page .panel .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #9700ff;
-}
-/* line 51, ../sass/Experience.scss */
-.experience_page .panel li > a {
-  color: white;
-}
-/* line 56, ../sass/Experience.scss */
-.experience_page .panel li:hover, .experience_page .panel a:hover {
-  background-color: #230138 !important;
-}
-/* line 60, ../sass/Experience.scss */
-.experience_page .panel .nav-pills > li.active > a, .experience_page .panel .nav-pills > li.active > a:hover, .experience_page .panel .nav-pills > li.active > a:focus {
-  background-color: #262626;
+/* line 28, ../sass/Experience.scss */
+.experience_page .competences {
+  height: 25px;
 }
