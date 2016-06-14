@@ -4,9 +4,84 @@
             <h2>Compétences</h2>
         </div>
         <div class="col-md-4 checkbox checkbox-slider--b toggle">
-            <label>
+            <label ng-click="Competences.Switch()">
                 <span>Humaines</span><input type="checkbox"><span>Techniques</span>
             </label>
+        </div>
+    </div>
+    <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
+
+    <div class="contenu">
+        <div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="heading{{competence.Id}}">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{competence.Id}}" data-target="#collapse{{competence.Id}}">
+                            {{competence.Name}}
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{competence.Id}}" aria-labelledby="heading{{competence.Id}}" class="panel-collapse collapse " ng-class="{
+                                        '' : competence.Id != Competences.DefaultSelect,
+                                        'in' : competence.Id == Competences.DefaultSelect
+                                     }">
+                    <div class="panel-body">
+                        <div class="experience">
+                            <div class="select-menu">
+                                <ul class="custom-bar nav nav-tabs nav-justified ">
+                                    <li ng-class="{
+                                        'non-active' : competence.MenuActif != 0,
+                                        'active' : competence.MenuActif == 0
+                                     }" ng-click="competence.Change(0);">
+                                        <a>Contexte</a>
+                                    </li>
+                                    <li ng-class="{
+                                        'non-active' : competence.MenuActif != 1,
+                                        'active' : competence.MenuActif == 1
+                                     }" ng-click="competence.Change(1);">
+                                        <a>Description</a>
+                                    </li>
+                                    <li ng-class="{
+                                        'non-active' : competence.MenuActif != 2,
+                                        'active' : competence.MenuActif == 2
+                                     }" ng-click="competence.Change(2);">
+                                        <a>Compétences liées</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <div ng-show="competence.MenuActif == 0">
+                                    <h3>Contexte</h3>
+                                    <div>
+                                        {{competence.Contexte}}
+                                    </div>
+                                </div>
+                                <div ng-show="competence.MenuActif == 1">
+                                    <h3>Description</h3>
+                                    <div>
+                                        {{competence.Description}}
+                                    </div>
+                                </div>
+                                <div ng-show="competence.MenuActif == 2">
+                                    <h3>Projets liées</h3>
+                                    <div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Projets</div>
+                                            <div class="panel-body">
+                                                <div class="projets" ng-repeat="projet in competence.Projets">
+                                                    <a>
+                                                        {{projet.Libelle}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
