@@ -1,4 +1,4 @@
-﻿<div class="page-competence" ng-controller="CompetenceController">
+﻿<div class="competence_page" ng-controller="CompetenceController">
     <div class="row title">
         <div class="col-md-2">
             <h2>Compétences</h2>
@@ -9,7 +9,7 @@
             </label>
         </div>
     </div>
-    <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
+    <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une compétence.</p>
 
     <div class="contenu">
         <div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
@@ -26,7 +26,7 @@
                                         'in' : competence.Id == Competences.DefaultSelect
                                      }">
                     <div class="panel-body">
-                        <div class="experience">
+                        <div class="detail">
                             <div class="select-menu">
                                 <ul class="custom-bar nav nav-tabs nav-justified ">
                                     <li ng-class="{
@@ -68,8 +68,8 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">Projets</div>
                                             <div class="panel-body">
-                                                <div class="projets" ng-repeat="projet in competence.Projets">
-                                                    <a>
+                                                <div class="liste" ng-repeat="projet in competence.Projets">
+                                                    <a ng-click="goProject(projet.Id)">
                                                         {{projet.Libelle}}
                                                     </a>
                                                 </div>

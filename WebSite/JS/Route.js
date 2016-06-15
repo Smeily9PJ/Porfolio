@@ -25,7 +25,7 @@
           controller: CompetenceController
       })
       .state('Competence.detail', {
-          url: '/competence/{refCompetence}',
+          url: '/competence/{refSwitch}/{refCompetence}',
           templateUrl: 'HTML/Competence.html',
           controller: CompetenceController
       })

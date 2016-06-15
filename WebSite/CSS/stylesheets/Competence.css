@@ -1,40 +1,40 @@
 /* Colors */
 /* Tailles */
-/* line 5, ../sass/Competence.scss */
-.page-competence .title > div {
+/* line 7, ../sass/Competence.scss */
+.competence_page .title > div {
   display: inline-block;
 }
-/* line 9, ../sass/Competence.scss */
-.page-competence .title .checkbox-slider--b input + span:after {
+/* line 11, ../sass/Competence.scss */
+.competence_page .title .checkbox-slider--b input + span:after {
   background-color: #9700ff;
 }
-/* line 14, ../sass/Competence.scss */
-.page-competence .title .checkbox-slider--b input:checked + span:before {
+/* line 16, ../sass/Competence.scss */
+.competence_page .title .checkbox-slider--b input:checked + span:before {
   background-color: #230138;
 }
-/* line 19, ../sass/Competence.scss */
-.page-competence .toggle {
+/* line 21, ../sass/Competence.scss */
+.competence_page .toggle {
   padding-top: 20px;
   padding-left: 50px;
 }
-/* line 24, ../sass/Competence.scss */
-.page-competence .toggle span {
+/* line 25, ../sass/Competence.scss */
+.competence_page .toggle span {
   margin-left: 5px;
   margin-right: 5px;
 }
-/* line 30, ../sass/Competence.scss */
-.page-competence .checkbox-slider--b input + span:before {
+/* line 31, ../sass/Competence.scss */
+.competence_page .checkbox-slider--b input + span:before {
   margin-left: 145px;
 }
-/* line 34, ../sass/Competence.scss */
-.page-competence .checkbox-slider--b input:checked + span:after,
-.page-competence .checkbox-slider--b input:checked + span:after {
+/* line 35, ../sass/Competence.scss */
+.competence_page .checkbox-slider--b input:checked + span:after,
+.competence_page .checkbox-slider--b input:checked + span:after {
   margin-top: 20px;
   margin-left: 165px;
 }
-/* line 40, ../sass/Competence.scss */
-.page-competence .checkbox-slider--b input + span:after,
-.page-competence .checkbox-slider--b input + span:after {
+/* line 41, ../sass/Competence.scss */
+.competence_page .checkbox-slider--b input + span:after,
+.competence_page .checkbox-slider--b input + span:after {
   margin-top: 20px;
   margin-left: 145px;
 }

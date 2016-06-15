@@ -17,7 +17,7 @@
                                         'in' : experience.Id == Experiences.DefaultProject
                                      }">
                     <div class="panel-body">
-                        <div class="experience">
+                        <div class="detail">
                             <div class="select-menu">
                                 <ul class="custom-bar nav nav-tabs nav-justified ">
                                     <li ng-class="{
@@ -59,7 +59,7 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">Compétences humaines</div>
                                             <div class="panel-body">
-                                                <div class="competences" ng-repeat="competenceHumaine in experience.CompetencesHumaines">
+                                                <div class="liste" ng-repeat="competenceHumaine in experience.CompetencesHumaines">
                                                     <a>
                                                         {{competenceHumaine.Libelle}}
                                                     </a>
@@ -69,7 +69,7 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">Compétences techniques</div>
                                             <div class="panel-body">
-                                                <div class="competences" ng-repeat="competenceTechnique in experience.CompetencesTechniques">
+                                                <div class="liste" ng-repeat="competenceTechnique in experience.CompetencesTechniques">
                                                     <a>
                                                         {{competenceTechnique.Libelle}}
                                                     </a>

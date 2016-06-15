@@ -1,4 +1,5 @@
 ﻿function CompetenceController($scope, $state) {
+    $scope.Menu.Change(2);
 
     var humaines = [
         getCompetenceHumaine1(),
@@ -29,7 +30,8 @@
         }
     };
     $scope.Competences = Competences;
-
+    var index = 1;
+    $scope.goProject = function (index) { $state.go("Experience.detail", { refExperience: index }); };
 }
 
 function getCompetenceHumaine1() {

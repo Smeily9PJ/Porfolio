@@ -1,6 +1,8 @@
 ﻿@import 'Variables';
 
-.page-competence {
+.competence_page {
+    // cf Experience.scss pour le style des accordéons et leur contenu
+
     .title {
         & > div {
             display: inline-block;
@@ -18,7 +20,6 @@
 
     .toggle {
         padding-top: $padding_text*2;
-      //  margin-top: $padding_text*2;
         padding-left: 50px;
 
         span {

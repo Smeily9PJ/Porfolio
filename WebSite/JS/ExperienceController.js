@@ -1,4 +1,5 @@
 ﻿function ExperienceController($scope, $state) {
+    $scope.Menu.Change(1);
 
     var items = [
         getExperience1(),
