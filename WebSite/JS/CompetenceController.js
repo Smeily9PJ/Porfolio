@@ -16,9 +16,8 @@
     var Competences = {};
     Competences.Humaines = humaines;
     Competences.Techniques = techniques;
-    Competences.Items = techniques;
-    Competences.DefaultSwitch = 0;
-    //Competences.DefaultSwitch = ($state.params.refSwitch != null || $state.params.refSwitch != undefined) ? $state.params.refSwitch : 0;
+    Competences.Items = [];
+    Competences.DefaultSwitch = ($state.params.refSwitch != null || $state.params.refSwitch != undefined) ? $state.params.refSwitch : 1;
     Competences.DefaultSelect = $state.params.refCompetence;
     Competences.Switch = function() {
         if (this.DefaultSwitch == 0) {
@@ -28,8 +27,11 @@
             this.Items = this.Humaines;
             this.DefaultSwitch = 0;
         }
+
+        return false;
     };
     $scope.Competences = Competences;
+    $scope.Competences.Switch();
     var index = 1;
     $scope.goProject = function (index) { $state.go("Experience.detail", { refExperience: index }); };
 }
