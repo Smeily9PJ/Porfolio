@@ -14,7 +14,7 @@ body .header {
   text-align: left;
   font-weight: bold;
   font-size: 40px;
-  border-bottom: 1px solid #9700ff;
+  border-bottom: 1px solid #bbadc4;
 }
 /* line 18, ../sass/StyleSheet.scss */
 body .header p.signature {
@@ -24,7 +24,7 @@ body .header p.signature {
 }
 /* line 25, ../sass/StyleSheet.scss */
 body .body {
-  border: 1px solid #9700ff;
+  border: 1px solid #bbadc4;
   padding-bottom: 100px;
   background-color: #262626;
 }

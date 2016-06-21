@@ -1,4 +1,5 @@
 packages/*
 .vs/*
-
+WebSite/CSS/.sass-cache/*
+images/*
 WebSite/CSS/.sass-cache/*

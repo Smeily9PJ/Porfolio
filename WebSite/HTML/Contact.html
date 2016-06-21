@@ -11,18 +11,13 @@
                         <label for="summernote">Corps du mail : </label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="Name" placeholder="Nom Prénom">
-                        <input type="email" class="form-control" id="Mail" placeholder="Mail">
-                        <div id="summernote">Saisissez le corps du mail ici.</div>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <input type="text" class="form-control" id="Name" placeholder="Nom Prénom" ng-model="Nom">
+                        <input type="email" class="form-control" id="Mail" placeholder="Mail" ng-model="Mail">
+                        <textarea class="form-control" rows="5" ng-model="Corp"></textarea>
+                        <button type="submit" ng-click="SendMail()" class="btn btn-primary">Envoyer</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('#summernote').summernote();
-    });
-</script>

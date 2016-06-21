@@ -2,13 +2,13 @@
 /* Tailles */
 /* line 3, ../sass/CollapseCustom.scss */
 .panel {
-  border-color: #9700ff;
+  border-color: #bbadc4;
 }
 /* line 6, ../sass/CollapseCustom.scss */
 .panel .panel-heading {
   color: white;
   background-color: #230138;
-  border-color: #9700ff;
+  border-color: #bbadc4;
 }
 /* line 12, ../sass/CollapseCustom.scss */
 .panel .panel-body {
@@ -16,5 +16,5 @@
 }
 /* line 16, ../sass/CollapseCustom.scss */
 .panel .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #9700ff;
+  border-top-color: #bbadc4;
 }

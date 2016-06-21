@@ -6,7 +6,7 @@
 }
 /* line 10, ../sass/Competence.scss */
 .competence_page .title .checkbox-slider--b input + span:after {
-  background-color: #9700ff;
+  background-color: #bbadc4;
 }
 /* line 15, ../sass/Competence.scss */
 .competence_page .title .checkbox-slider--b input:checked + span:before {
