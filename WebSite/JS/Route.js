@@ -15,7 +15,7 @@
           controller: ExperienceController
       })
       .state('Experience.detail', {
-          url: '/experience/{refExperience}',
+          url: '/{refExperience}',
           templateUrl: 'HTML/Experience.html',
           controller: ExperienceController
       })
@@ -25,7 +25,7 @@
           controller: CompetenceController
       })
       .state('Competence.detail', {
-          url: '/competence/{refSwitch}/{refCompetence}',
+          url: '/{refSwitch}/{refCompetence}',
           templateUrl: 'HTML/Competence.html',
           controller: CompetenceController
       })

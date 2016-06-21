@@ -2,7 +2,7 @@
 <html lang="fr" ng-app="app">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Portfolio/Julie </title>
     <meta charset="utf-8" />
     <link href="Library/bootstrap.css" rel="stylesheet">
     <link href="Library/titatoggle-dist.css" rel="stylesheet">
@@ -31,18 +31,24 @@
 </head>
 <body ng-controller="MenuController">
     <div class="header">
+        <p>Portfolio</p>
+        <p class="signature">Signé : Pélissou Julie</p>
     </div>
-    <div class="row">
-        <div class="body col-md-10 col-md-offset-1">
-            <ul class="custom-bar nav nav-tabs nav-justified ">
-                <li ng-repeat="menuItem in Menu.Items" ng-class="{
+    <div class="body row">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <ul class="custom-bar nav nav-tabs nav-justified ">
+                    <li ng-repeat="menuItem in Menu.Items" ng-class="{
                     '' : !menuItem.Active,
                     'active' : menuItem.Active
                  }">
-                    <a href="{{menuItem.Href}}" ng-click="Menu.Change($index)">{{menuItem.Name}}</a>
-                </li>
-            </ul>
-            <div class="main-content" ui-view></div>
+                        <a href="{{menuItem.Href}}" ng-click="Menu.Change($index)"><b>{{menuItem.Name}}</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="main-content col-md-8 col-md-offset-2" ui-view></div>
         </div>
     </div>
 </body>

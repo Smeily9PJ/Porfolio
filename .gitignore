@@ -1,4 +1,4 @@
 packages/*
 .vs/*
 
-.sass-cache/*
+WebSite/CSS/.sass-cache/*

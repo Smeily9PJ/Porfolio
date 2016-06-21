@@ -7,18 +7,28 @@ body {
 }
 /* line 8, ../sass/StyleSheet.scss */
 body .header {
-  height: 100px;
-  background-image: url(../../Assets/banniere.png);
+  height: 200px;
+  background-image: url(../../Assets/imgBanniere.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  border-bottom: 1px solid #9700ff;
 }
-/* line 15, ../sass/StyleSheet.scss */
+/* line 18, ../sass/StyleSheet.scss */
+body .header p.signature {
+  padding-left: 100px;
+  font-weight: normal;
+  font-size: 30px;
+}
+/* line 25, ../sass/StyleSheet.scss */
 body .body {
   border: 1px solid #9700ff;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   background-color: #262626;
 }
-/* line 21, ../sass/StyleSheet.scss */
+/* line 31, ../sass/StyleSheet.scss */
 body .main-content {
   padding-left: 10px;
   padding-right: 10px;

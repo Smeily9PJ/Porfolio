@@ -1,11 +1,11 @@
 ﻿<div class="competence_page" ng-controller="CompetenceController">
     <div class="row title">
         <div class="col-md-2">
-            <h2>Compétences</h2>
+            <h1>Compétences</h1>
         </div>
         <div class="col-md-4 checkbox checkbox-slider--b toggle" ng-mouseup="Competences.Switch()">
             <label>
-                <span>Humaines</span><input type="checkbox"><span>Techniques</span>
+                <span>Humaines</span><input type="checkbox" ng-checked="Competences.DefaultTechniques" checked><span>Techniques</span>
             </label>
         </div>
     </div>
@@ -15,11 +15,11 @@
         <div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
             <div class="panel panel-default">
                 <div class="panel-heading" id="heading{{competence.Id}}">
-                    <h4 class="panel-title">
+                    <h2 class="panel-title">
                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{competence.Id}}" data-target="#collapse{{competence.Id}}">
                             {{competence.Name}}
                         </a>
-                    </h4>
+                    </h2>
                 </div>
                 <div id="collapse{{competence.Id}}" aria-labelledby="heading{{competence.Id}}" class="panel-collapse collapse " ng-class="{
                                         '' : competence.Id != Competences.DefaultSelect,
@@ -33,25 +33,25 @@
                                         'non-active' : competence.MenuActif != 0,
                                         'active' : competence.MenuActif == 0
                                      }" ng-click="competence.Change(0);">
-                                        <a>Contexte</a>
+                                        <a><b>Contexte</b></a>
                                     </li>
                                     <li ng-class="{
                                         'non-active' : competence.MenuActif != 1,
                                         'active' : competence.MenuActif == 1
                                      }" ng-click="competence.Change(1);">
-                                        <a>Description</a>
+                                        <a><b>Description</b></a>
                                     </li>
                                     <li ng-class="{
                                         'non-active' : competence.MenuActif != 2,
                                         'active' : competence.MenuActif == 2
                                      }" ng-click="competence.Change(2);">
-                                        <a>Compétences liées</a>
+                                        <a><b>Projets liées</b></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content">
                                 <div ng-show="competence.MenuActif == 0">
-                                    <h3>Contexte</h3>
+                                    <h3>Signication</h3>
                                     <div>
                                         {{competence.Contexte}}
                                     </div>

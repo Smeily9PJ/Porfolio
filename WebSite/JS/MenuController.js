@@ -1,12 +1,12 @@
 ﻿function MenuController($scope) {
     var items = [
         {
-            Name: "Home",
+            Name: "Accueil",
             Href: "#/home",
             Active: true
         },
         {
-            Name: "Expérience",
+            Name: "Expériences",
             Href: "#/experience",
             Active: false
         },
@@ -16,7 +16,7 @@
             Active: false
         },
         {
-            Name: "Loisirs",
+            Name: "Activités extra-pro",
             Href: "#/loisir",
             Active: false
         },

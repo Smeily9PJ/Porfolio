@@ -1,16 +1,16 @@
 ﻿<div class="experience_page" ng-controller="ExperienceController">
-    <h2>Expériences</h2>
+    <h1>Expériences</h1>
     <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
 
     <div class="contenu">
         <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
             <div class="panel panel-default">
                 <div class="panel-heading" id="heading{{experience.Id}}">
-                    <h4 class="panel-title">
+                    <h2 class="panel-title">
                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{experience.Id}}" data-target="#collapse{{experience.Id}}">
                             {{experience.Name}}
                         </a>
-                    </h4>
+                    </h2>
                 </div>
                 <div id="collapse{{experience.Id}}" aria-labelledby="heading{{experience.Id}}" class="panel-collapse collapse " ng-class="{
                                         '' : experience.Id != Experiences.DefaultProject,
@@ -24,19 +24,19 @@
                                         'non-active' : experience.MenuActif != 0,
                                         'active' : experience.MenuActif == 0
                                      }" ng-click="experience.Change(0);">
-                                        <a>Contexte</a>
+                                        <a><b>Contexte</b></a>
                                     </li>
                                     <li ng-class="{
                                         'non-active' : experience.MenuActif != 1,
                                         'active' : experience.MenuActif == 1
                                      }" ng-click="experience.Change(1);">
-                                        <a>Description</a>
+                                        <a><b>Description</b></a>
                                     </li>
                                     <li ng-class="{
                                         'non-active' : experience.MenuActif != 2,
                                         'active' : experience.MenuActif == 2
                                      }" ng-click="experience.Change(2);">
-                                        <a>Compétences liées</a>
+                                        <a><b>Compétences liées</b></a>
                                     </li>
                                 </ul>
                             </div>
@@ -60,7 +60,7 @@
                                             <div class="panel-heading">Compétences humaines</div>
                                             <div class="panel-body">
                                                 <div class="liste" ng-repeat="competenceHumaine in experience.CompetencesHumaines">
-                                                    <a>
+                                                    <a ng-click="goCompetence(0, competenceHumaine.Id)">
                                                         {{competenceHumaine.Libelle}}
                                                     </a>
                                                 </div>
@@ -70,7 +70,7 @@
                                             <div class="panel-heading">Compétences techniques</div>
                                             <div class="panel-body">
                                                 <div class="liste" ng-repeat="competenceTechnique in experience.CompetencesTechniques">
-                                                    <a>
+                                                    <a ng-click="goCompetence(1, competenceTechnique.Id)">
                                                         {{competenceTechnique.Libelle}}
                                                     </a>
                                                 </div>

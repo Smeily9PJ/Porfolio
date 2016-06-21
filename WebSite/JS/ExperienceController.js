@@ -10,7 +10,7 @@
     Experiences.Items = items;
     Experiences.DefaultProject = $state.params.refExperience;
     $scope.Experiences = Experiences;
-
+    $scope.goCompetence = function (refSwitch, index) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: index }); };
 }
 
 function getExperience1() {
@@ -18,48 +18,45 @@ function getExperience1() {
     var exp1 = {
         Id: 1,
         MenuActif: 0,
-        Name: "Expérience 1 : faire marche ce p$^*ù de truc",
+        Name: "Web api : Check your smile",
         Contexte:
-            "L'histoire se déroule dans un univers au bord de la crise." +
-            "Afin de rapprocher les différentes espèces intelligentes et de réguler le terrorisme interplanétaire, les plus puissantes planètes créent la Fédération Galactique, dont le nombre de planètes membres ne cesse de grossir." +
-            "Les « Chozos » (chōjin-zoku en VO (鳥人族 qui se lit « race d'homme oiseau »)), la race la plus intelligente connue de la galaxie, enseignent aux différentes civilisations quelques rudiments de leur technologie de pointe, afin de maintenir la stabilité de l'Univers." +
-            "De l'autre côté, les « pirates de l'espace », peuple nomade ultra-violent très avancé technologiquement, vivent de leurs pillages effectués par leurs armées suréquipées sur les autres planètes, et récupèrent petit à petit les secrets chozos disséminés dans la galaxie." +
-            "Les Chozos combattent ardemment les pirates, puis disparaissent totalement de la galaxie, laissant derrière eux leurs colonies en ruines. Que leur est-il arrivé ? Pourquoi les représentants de ce peuple éparpillé aux quatre coins de l'Univers ont-ils tous disparu en même temps ? Les recherches de la Fédération Galactique sont vaines, et ces derniers restent seuls face aux pirates." +
-            "Certaines des prophéties chozos retrouvées prétendent tout de même que leur peuple attend la venue de l'« Élu » de la lumière, équipé de leurs armes et armure, qui achèvera leur œuvre." +
-            "Le temps passa et l'Élu ne vint pas. Toute la bordure extérieure de la galaxie est maintenant sous le joug des pirates de l'espace qui se sont relancés sur les dernières études des Chozos au sujet des armes biologiques." +
-            "Sur la petite colonie terrienne K-2L naît Samus Aran." +
-            "Alors que cette dernière est âgée de 3 ans, la colonie est attaquée par un escadron scientifique des pirates de l'Espace. La police galactique sur place tente de résister, mais est balayée par la nouvelle « recrue » des pirates ici à l'essai : Ridley." +
-            "La famille de Samus est massacrée ainsi que tous les habitants de K-2L, excepté Samus Aran elle-même, cachée par sa mère. Cette dernière est recueillie après le drame par deux Chozos rescapés, arrivés trop tard. Ces derniers la ramènent sur la dernière planète chozo, Zebes, où ils la forment comme un guerrier chozo." +
-            "Une dizaine d'années plus tard, Samus achève son entraînement et se voit confier un Costume de Puissance sur mesure, le seul de toute l'Histoire Galactique. (Il apparaît dans le second volume du E-manga que Mother Brain était une intelligence artificielle créée par les Chozos et qui leur servait d'ordinateur central, d'interface planétaire, sur la planète Zebes. Par la suite et sans qu'on ait encore d'explication, Mother Brain deviendra le chef des pirates de l'espace.)" +
-            "Samus, dans le but d'éliminer la menace pirate afin de venger ses parents, devient un Space Hunter, un des mercenaires de la Fédération galactique. Cependant, une de ses missions la ramènera sur Zebes, à présent en ruine, afin d'y effectuer sa « Mission zéro », car les pirates de l'espace, dans leur soif de pouvoir, viennent de réveiller une ancienne malédiction : les Métroïdes…" +
-            "La trame scénaristique de la série ainsi que certains éléments de l'histoire semblent fortement inspirés ou similaires à l'univers des films de science-fiction Alien. C'est d'ailleurs pour cela qu'un boss du jeu s'appelle Ridley (référence à Ridley Scott)." +
-            "Les Chozos disent être morts à cause d'un poison qui occupera le devant de la scène dans toute la saga Prime, le phazon.",
-        Description: "Une desc",
+            "Projet étudiant, développeur-concepteur, chef d'équipe, but du projet, à quoi il sert",
+        Description: "Description des taches que j'ai effectué," +
+            "des problèmes rencontrés et des résolutions, des captures d'écrans..."+
+            "Le projet a évolué depuis, implémentation de news fonctions pour d'autres étudiants "+
+            "les années suivantes...",
         CompetencesHumaines: [
             {
-                Libelle: "Competence hum 1",
+                Libelle: "Médiatrice/diplomate",
                 Id: 1
             },
             {
-                Libelle: "Competence hum 2",
+                Libelle: "Optimiste",
                 Id: 2
             },
             {
-                Libelle: "Competence hum 2",
+                Libelle: "Sociable",
                 Id: 3
             }
         ],
         CompetencesTechniques: [
             {
-                Libelle: "Competence tec 1",
+                Libelle: "SQL",
                 Id: 1
             },
             {
-                Libelle: "Competence tec 2",
+                Libelle: "HTML",
+                Id: 2
+            },
+            {
+                Libelle: "CSS",
+                Id: 2
+            },
+            {
+                Libelle: "Architecture client-serveur",
                 Id: 2
             }
         ]
-
     };
     exp1.Change = function (index) { exp1.MenuActif = index; };
     return exp1;
@@ -70,36 +67,54 @@ function getExperience2() {
     var exp2 = {
         Id: 2,
         MenuActif: 0,
-        Name: "Expérience 2 : test",
+        Name: "Web api : Meeting tracker",
         Contexte:
-            "L'histoire se déroule dans un univers au bord de la crise." +
-            "Afin de rapprocher les différentes espèces intelligentes et de réguler le terrorisme interplanétaire, les plus puissantes planètes créent la Fédération Galactique, dont le nombre de planètes membres ne cesse de grossir." +
-            "Les « Chozos » (chōjin-zoku en VO (鳥人族 qui se lit « race d'homme oiseau »)), la race la plus intelligente connue de la galaxie, enseignent aux différentes civilisations quelques rudiments de leur technologie de pointe, afin de maintenir la stabilité de l'Univers." +
-            "De l'autre côté, les « pirates de l'espace », peuple nomade ultra-violent très avancé technologiquement, vivent de leurs pillages effectués par leurs armées suréquipées sur les autres planètes, et récupèrent petit à petit les secrets chozos disséminés dans la galaxie." +
-            "Les Chozos combattent ardemment les pirates, puis disparaissent totalement de la galaxie, laissant derrière eux leurs colonies en ruines. Que leur est-il arrivé ? Pourquoi les représentants de ce peuple éparpillé aux quatre coins de l'Univers ont-ils tous disparu en même temps ? Les recherches de la Fédération Galactique sont vaines, et ces derniers restent seuls face aux pirates." +
-            "Certaines des prophéties chozos retrouvées prétendent tout de même que leur peuple attend la venue de l'« Élu » de la lumière, équipé de leurs armes et armure, qui achèvera leur œuvre." +
-            "Le temps passa et l'Élu ne vint pas. Toute la bordure extérieure de la galaxie est maintenant sous le joug des pirates de l'espace qui se sont relancés sur les dernières études des Chozos au sujet des armes biologiques." +
-            "Sur la petite colonie terrienne K-2L naît Samus Aran." +
-            "Alors que cette dernière est âgée de 3 ans, la colonie est attaquée par un escadron scientifique des pirates de l'Espace. La police galactique sur place tente de résister, mais est balayée par la nouvelle « recrue » des pirates ici à l'essai : Ridley." +
-            "La famille de Samus est massacrée ainsi que tous les habitants de K-2L, excepté Samus Aran elle-même, cachée par sa mère. Cette dernière est recueillie après le drame par deux Chozos rescapés, arrivés trop tard. Ces derniers la ramènent sur la dernière planète chozo, Zebes, où ils la forment comme un guerrier chozo." +
-            "Une dizaine d'années plus tard, Samus achève son entraînement et se voit confier un Costume de Puissance sur mesure, le seul de toute l'Histoire Galactique. (Il apparaît dans le second volume du E-manga que Mother Brain était une intelligence artificielle créée par les Chozos et qui leur servait d'ordinateur central, d'interface planétaire, sur la planète Zebes. Par la suite et sans qu'on ait encore d'explication, Mother Brain deviendra le chef des pirates de l'espace.)" +
-            "Samus, dans le but d'éliminer la menace pirate afin de venger ses parents, devient un Space Hunter, un des mercenaires de la Fédération galactique. Cependant, une de ses missions la ramènera sur Zebes, à présent en ruine, afin d'y effectuer sa « Mission zéro », car les pirates de l'espace, dans leur soif de pouvoir, viennent de réveiller une ancienne malédiction : les Métroïdes…" +
-            "La trame scénaristique de la série ainsi que certains éléments de l'histoire semblent fortement inspirés ou similaires à l'univers des films de science-fiction Alien. C'est d'ailleurs pour cela qu'un boss du jeu s'appelle Ridley (référence à Ridley Scott)." +
-            "Les Chozos disent être morts à cause d'un poison qui occupera le devant de la scène dans toute la saga Prime, le phazon.",
-        Description: "Une desc",
+            "Projet étudiant, développeur-concepteur, médiatrice, but du projet, à quoi il sert",
+        Description: "Description des taches que j'ai effectué," +
+            "des problèmes rencontrés et des résolutions, des captures d'écrans..." +
+            "Le projet a évolué depuis, implémentation de news fonctions pour d'autres étudiants " +
+            "les années suivantes...",
         CompetencesHumaines: [
             {
-                Libelle: "Competence hum 1",
+                Libelle: "Médiatrice/diplomate",
                 Id: 1
+            },
+            {
+                Libelle: "Optimiste",
+                Id: 2
+            },
+            {
+                Libelle: "Sociable",
+                Id: 3
             }
         ],
         CompetencesTechniques: [
             {
-                Libelle: "Competence tec 1",
+                Libelle: "SQL",
                 Id: 1
             },
             {
-                Libelle: "Competence tec 2",
+                Libelle: "Socket",
+                Id: 1
+            },
+            {
+                Libelle: "Java",
+                Id: 2
+            },
+            {
+                Libelle: "HTML",
+                Id: 2
+            },
+            {
+                Libelle: "CSS",
+                Id: 2
+            },
+            {
+                Libelle: "Architecture client-serveur",
+                Id: 2
+            },
+            {
+                Libelle: "Méthodes agiles",
                 Id: 2
             }
         ]

@@ -1,5 +1,5 @@
 ﻿<div class="home_page" ng-controller="HomeController">
-    <h2>Home</h2>
+    <h1>Une brève décourte de Julie...</h1>
     <div class="description">
         <p>Je me présente, Julie Pélissou, née le 23 novembre 1994, actuellement alternante chez Gfi informatique à Clichy et j'étudie au sein de l'école intech à Ivry.</p>
         <p>Je vous laisse me découvrir dans la vidéo qui suit et/ou dans le descriptif juste à côté. </p>
@@ -12,19 +12,27 @@
         </div>
 
         <div class="col-md-6">
-            <p>
-                Locknar à 27 ans. Né à Tarentula en automne il est l’héritier de la prestigieuse famille humaine Jupitax.
-                Dès son plus jeune âge, il était destiné à présider les fameuses industries familiales et à épouser la belle Agnès Eiffel.
-                Agnès elle-même est héritière des chantiers de machines de guerre Eiffel, concurrent historique des industries Jupitax.
-                La jeune Agnès  avait toujours préférée les femmes aux hommes mais elle savait que personne ne lui demanderai jamais son avis.
-                Alors elle se disait que personnes ne conviendrai mieux pour être son mari que Locknar son ami d’enfance.
-                A 15 ans, Locknar rejoint la prestigieuse université technologie Pierre Tesla à Tarentula pour un cursus classique d’ingénieur de premier ordre.
-                Deux ans après son admission il fit la rencontre du professeur Sébastian Vertigo et cette rencontre aller changer sa vie à jamais.
-                Il ne le savait pas encore mais Sébastian Vertigo était le grand dragon de l’organisation Ferdragon, une organisation illégale et secrète par laquelle ses adeptes, les néogiciens prônaient l’utilisation de la magie afin d’améliorer la technologie. L’ambitieux Locknar voyait dans cette organisation un moyen efficace de doper la technologie des industries Jupitax et d’étancher sa soif de connaissance. Avec une telle motivation il atteint rapidement le grade de Vouivre confirmé. Le diplôme d’ingénieur n’était plus alors qu’une simple formalité. 
-            </p>
+            <ul>
+                <li>
+                    Présentation de moi en général, mes qualités et défauts
+                </li>
+                <li>
+                    Mes compétences
+                </li>
+                <li>
+                    Vers quoi je veux m'orienter comme tehnos
+                </li>
+                <li>
+                   Une ouverture pour plus tard, où je me vois
+                </li>
+            </ul>
         </div>
     </div>
     <div class="conseil">
-        Un de mes projets préféré : <a ng-click="goFavoryProject()">Projet de test</a>
+        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+       Vous pouvez vous orienter vers le projet suivant : 
+        <button ng-click="goFavoryProject()" type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+        </button>
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
     </div>
 </div>
