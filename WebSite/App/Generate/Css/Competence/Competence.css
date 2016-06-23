@@ -1,53 +1,34 @@
 /* Colors */
 /* Tailles */
-/* line 6, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .title > div {
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 10, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .title .checkbox-slider--b input + span:after {
-  background-color: #bbadc4;
-}
+  background-color: #bbadc4; }
 
-/* line 15, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .title .checkbox-slider--b input:checked + span:before {
-  background-color: #230138;
-}
+  background-color: #230138; }
 
-/* line 20, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .toggle {
   padding-top: 20px;
-  padding-left: 80px;
-}
+  padding-left: 80px; }
+  .competence_page .toggle span {
+    margin-left: 5px;
+    margin-right: 5px; }
 
-/* line 24, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
-.competence_page .toggle span {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-/* line 30, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .radio label, .competence_page .checkbox label {
   font-weight: bold;
-  font-size: large;
-}
+  font-size: large; }
 
-/* line 35, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .checkbox-slider--b input + span:before {
-  margin-left: 195px;
-}
+  margin-left: 195px; }
 
-/* line 39, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .checkbox-slider--b input:checked + span:after,
 .competence_page .checkbox-slider--b input:checked + span:after {
   margin-top: 20px;
-  margin-left: 215px;
-}
+  margin-left: 215px; }
 
-/* line 45, C:/Users/loli/workspaces/Portfolio/WebSite/App/Competence/Competence.scss */
 .competence_page .checkbox-slider--b input + span:after,
 .competence_page .checkbox-slider--b input + span:after {
   margin-top: 20px;
-  margin-left: 195px;
-}
+  margin-left: 195px; }

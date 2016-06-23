@@ -1,39 +1,25 @@
 /* Colors */
 /* Tailles */
-/* line 4, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/StyleSheet.scss */
 body {
   background-color: #08050d;
-  color: s;
-}
-
-/* line 8, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/StyleSheet.scss */
-body .header {
-  height: 200px;
-  background-image: url(../../Assets/imgBanniere.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  text-align: left;
-  font-weight: bold;
-  font-size: 40px;
-  border-bottom: 1px solid #bbadc4;
-}
-
-/* line 18, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/StyleSheet.scss */
-body .header p.signature {
-  padding-left: 100px;
-  font-weight: normal;
-  font-size: 30px;
-}
-
-/* line 25, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/StyleSheet.scss */
-body .body {
-  border: 1px solid #bbadc4;
-  padding-bottom: 100px;
-  background-color: #262626;
-}
-
-/* line 31, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/StyleSheet.scss */
-body .main-content {
-  padding-left: 10px;
-  padding-right: 10px;
-}
+  color: white; }
+  body .header {
+    height: 200px;
+    background-image: url(../../Assets/imgBanniere.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    text-align: left;
+    font-weight: bold;
+    font-size: 40px;
+    border-bottom: 1px solid #bbadc4; }
+    body .header p.signature {
+      padding-left: 100px;
+      font-weight: normal;
+      font-size: 30px; }
+  body .body {
+    border: 1px solid #bbadc4;
+    padding-bottom: 100px;
+    background-color: #262626; }
+  body .main-content {
+    padding-left: 10px;
+    padding-right: 10px; }

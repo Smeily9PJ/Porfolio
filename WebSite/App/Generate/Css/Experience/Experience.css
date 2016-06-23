@@ -1,34 +1,24 @@
 /* Colors */
 /* Tailles */
-/* line 4, C:/Users/loli/workspaces/Portfolio/WebSite/App/Experience/Experience.scss */
 .experience_page .detail, .competence_page .detail {
-  padding-top: 10px;
-}
+  padding-top: 10px; }
 
-/* line 8, C:/Users/loli/workspaces/Portfolio/WebSite/App/Experience/Experience.scss */
 .experience_page .en-tete, .competence_page .en-tete {
   padding-top: 10px;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
 
-/* line 13, C:/Users/loli/workspaces/Portfolio/WebSite/App/Experience/Experience.scss */
 .experience_page .select-menu, .competence_page .select-menu {
   width: 99.05%;
   padding-top: 10px;
   margin: auto;
-  margin-bottom: -1px;
-}
+  margin-bottom: -1px; }
 
-/* line 20, C:/Users/loli/workspaces/Portfolio/WebSite/App/Experience/Experience.scss */
 .experience_page .content, .competence_page .content {
   width: 99%;
   background-color: #262626;
   border: 1px solid #bbadc4;
   padding: 10px;
-  margin: auto;
-}
+  margin: auto; }
 
-/* line 28, C:/Users/loli/workspaces/Portfolio/WebSite/App/Experience/Experience.scss */
 .experience_page .liste, .competence_page .liste {
-  height: 25px;
-}
+  height: 25px; }
