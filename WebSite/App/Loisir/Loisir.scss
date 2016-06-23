@@ -1,0 +1,8 @@
+﻿@import '../General/Variables.scss';
+
+.contact_page {
+    .btn-primary {
+        background-color: $background_color_hover;
+        border-color: $background_color;
+    }
+}

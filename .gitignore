@@ -2,4 +2,6 @@ packages/*
 .vs/*
 WebSite/CSS/.sass-cache/*
 images/*
-WebSite/CSS/.sass-cache/*
+WebSite/node_modules/*
+
+node_modules/*

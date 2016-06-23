@@ -1,0 +1,31 @@
+﻿@import '../General/Variables.scss';
+
+.experience_page, .competence_page {
+    .detail {
+        padding-top: $padding_text;
+    }
+
+    .en-tete {
+        padding-top: $padding_text;
+        padding-bottom: $padding_text;
+    }
+
+    .select-menu {
+        width: 99.05%;
+        padding-top: $padding_text;
+        margin: auto;
+        margin-bottom: -1px;
+    }
+
+    .content {
+        width: 99%;
+        background-color: $background_color_body;
+        border: 1px solid $border_color;
+        padding: $padding_text;
+        margin: auto;
+    }
+
+    .liste {
+        height: 25px;
+    }
+}

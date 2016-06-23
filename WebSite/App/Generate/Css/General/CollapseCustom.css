@@ -1,0 +1,23 @@
+/* Colors */
+/* Tailles */
+/* line 3, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/CollapseCustom.scss */
+.panel {
+  border-color: #bbadc4;
+}
+
+/* line 6, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/CollapseCustom.scss */
+.panel .panel-heading {
+  color: s;
+  background-color: #230138;
+  border-color: #bbadc4;
+}
+
+/* line 12, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/CollapseCustom.scss */
+.panel .panel-body {
+  background-color: #08050d;
+}
+
+/* line 16, C:/Users/loli/workspaces/Portfolio/WebSite/App/General/CollapseCustom.scss */
+.panel .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #bbadc4;
+}
