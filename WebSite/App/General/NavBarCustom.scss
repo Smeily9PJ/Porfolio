@@ -6,11 +6,13 @@
     border: 1px solid $border_color !important;
     // border-bottom:none !important ;
     color: $text_color;
+
+    box-shadow: inset 0px 10px 10px 3px $background_color_hover;
 }
 
 /* active tab color */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color: $text_color;
+     color: $text_color;
     background-color: $background_color_body;
     border-color: $border_color;
     border-bottom: none !important;
