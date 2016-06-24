@@ -4,7 +4,8 @@
 .nav-tabs > li > a {
   background-color: #08050d;
   border: 1px solid #bbadc4 !important;
-  color: white; }
+  color: white;
+  box-shadow: inset 0px 10px 10px 3px #230138; }
 
 /* active tab color */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {

@@ -1,11 +1,17 @@
 /* Colors */
 /* Tailles */
+@font-face {
+  font-family: 'Lamina';
+  src: url("../../../../fonts/PolenticalNeonRegular.ttf"); }
+
 body {
+  font-family: 'Lamina';
+  font-size: 12px;
   background-color: #08050d;
   color: white; }
   body .header {
     height: 200px;
-    background-image: url(../../Assets/imgBanniere.jpg);
+    background-image: url(../../../../Assets/imgBanniere.jpg);
     background-repeat: no-repeat;
     background-position-x: center;
     text-align: left;

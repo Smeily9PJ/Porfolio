@@ -3,5 +3,5 @@ packages/*
 WebSite/CSS/.sass-cache/*
 images/*
 WebSite/node_modules/*
-
+WebSite/App/Generate/*
 node_modules/*
