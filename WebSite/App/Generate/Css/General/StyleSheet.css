@@ -17,13 +17,16 @@ body {
     text-align: left;
     font-weight: bold;
     font-size: 40px;
-    border-bottom: 1px solid #bbadc4; }
+    border-bottom: 1px solid #211920; }
     body .header p.signature {
       padding-left: 100px;
       font-weight: normal;
       font-size: 30px; }
+  body .version {
+    float: right;
+    padding-right: 10px; }
   body .body {
-    border: 1px solid #bbadc4;
+    border: 1px solid #211920;
     padding-bottom: 100px;
     background-color: #262626; }
   body .main-content {

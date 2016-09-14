@@ -30,6 +30,11 @@ body {
         }
     }
 
+    .version {
+        float: right;
+        padding-right: 10px;
+    }
+
     .body {
         border: 1px solid $border_color;
         padding-bottom: $height_header/2;

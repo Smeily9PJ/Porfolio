@@ -1,12 +1,12 @@
 /* Colors */
 /* Tailles */
 .panel {
-  border-color: #bbadc4; }
+  border-color: #211920; }
   .panel .panel-heading {
     color: white;
     background-color: #230138;
-    border-color: #bbadc4; }
+    border-color: #211920; }
   .panel .panel-body {
     background-color: #08050d; }
   .panel .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #bbadc4; }
+    border-top-color: #211920; }

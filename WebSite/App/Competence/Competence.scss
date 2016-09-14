@@ -8,7 +8,7 @@
         }
 
         .checkbox-slider--b input + span:after {
-            background-color: $border_color;
+            background-color: $text_color;
         }
 
 
@@ -19,7 +19,8 @@
 
     .toggle {
         padding-top: $padding_text*2;
-        padding-left: 80px;
+        padding-left: 130px;
+        width: 500px;
 
         span {
             margin-left: 5px;
@@ -33,18 +34,18 @@
     }
 
     .checkbox-slider--b input + span:before {
-        margin-left: 195px;
+        margin-left: 260px;
     }
 
     .checkbox-slider--b input:checked + span:after,
     .checkbox-slider--b input:checked + span:after {
         margin-top: $padding_text*2;
-        margin-left: 215px;
+        margin-left: 280px;
     }
 
     .checkbox-slider--b input + span:after,
     .checkbox-slider--b input + span:after {
         margin-top: $padding_text*2;
-        margin-left: 195px;
+        margin-left: 260px;
     }
 }
