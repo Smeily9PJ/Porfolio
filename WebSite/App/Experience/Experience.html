@@ -1,8 +1,20 @@
 ﻿<div class="experience_page" ng-controller="ExperienceController">
     <h1>Expériences</h1>
     <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
-
-    <div class="contenu">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="contenu">   
         <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
             <div class="panel panel-default">
                 <div class="panel-heading" id="heading{{experience.Id}}">
