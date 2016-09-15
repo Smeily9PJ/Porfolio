@@ -39,5 +39,7 @@
         }
     }
 
+    Menu.Version = "0.1";
+
     $scope.Menu = Menu;
 }

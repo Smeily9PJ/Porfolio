@@ -5,3 +5,4 @@ images/*
 WebSite/node_modules/*
 WebSite/App/Generate/*
 node_modules/*
+*.css
