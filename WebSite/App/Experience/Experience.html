@@ -7,15 +7,12 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li ng-repeat="experience in Experiences.Items"><a href="#">{{experience.Name}}</a></li>
         </ul>
     </div>
     <div class="contenu">   
-        <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
+        <div ng-include="'MeetingTracker.html'"></div>
+       <!-- <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
             <div class="panel panel-purple">
                 <div class="panel-heading" id="heading{{experience.Id}}">
                     <h2 class="panel-title">
@@ -95,6 +92,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
