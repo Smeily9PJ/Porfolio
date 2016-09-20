@@ -2,16 +2,14 @@
     <h1>Expériences</h1>
     <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une expérience.</p>
     <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li ng-repeat="experience in Experiences.Items"><a href="#">{{experience.Name}}</a></li>
-        </ul>
+        <select class="form-control">
+            <option>SPIRIT</option>
+            <option>Meeting tracker</option>
+            <option>Check your SMILE</option>
+        </select>
     </div>
     <div class="contenu">   
-        <div ng-include="'MeetingTracker.html'"></div>
+            <div ng-include="'App/Experience/MeetingTracker.html'"></div>
        <!-- <div ng-repeat="experience in Experiences.Items" class="panel-group" id="accordion{{experience.Id}}">
             <div class="panel panel-purple">
                 <div class="panel-heading" id="heading{{experience.Id}}">

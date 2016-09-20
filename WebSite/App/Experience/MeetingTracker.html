@@ -1,22 +1,44 @@
-﻿<div class="panel-group">
+﻿<h2>Meeting tracker</h2>
+<div class="panel-group" id="accordion1">
     <div class="panel panel-purple">
-        <div class="panel-heading">
+        <div class="panel-heading" id="heading1">
             <h2 class="panel-title">
-                <a class="collapsed" data-toggle="collapse">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse1">
                     Description
                 </a>
             </h2>
         </div>
-        <div class="panel-collapse collapse">
+        <div id="collapse1" aria-labelledby="heading1" class="panel-collapse collapse">
             <div class="panel-body">
-                <div class="detail">
-                    <div class="content">
-                        <h3>Compétences liées</h3>
-                        <div>
-                            TOTO
-                        </div>
-                    </div>
-                </div>
+                Description
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-purple">
+        <div class="panel-heading" id="heading2">
+            <h2 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse2">
+                    Contexte
+                </a>
+            </h2>
+        </div>
+        <div id="collapse2" aria-labelledby="heading2" class="panel-collapse collapse">
+            <div class="panel-body">
+                Contexte
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-purple">
+        <div class="panel-heading" id="heading3">
+            <h2 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse3">
+                    Détail
+                </a>
+            </h2>
+        </div>
+        <div id="collapse3" aria-labelledby="heading3" class="panel-collapse collapse">
+            <div class="panel-body">
+                Détail
             </div>
         </div>
     </div>
