@@ -10,9 +10,16 @@
         </div>
     </div>
     <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une compétence.</p>
-
+    <div class="dropdown">
+        <select class="form-control">
+            <option>Comp1</option>
+            <option>Comp2</option>
+            <option>Comp3</option>
+        </select>
+    </div>
     <div class="contenu">
-        <div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
+        <div ng-include="'App/Competence/Competence1.html'"></div>
+        <!--<div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
             <div class="panel panel-default">
                 <div class="panel-heading" id="heading{{competence.Id}}">
                     <h2 class="panel-title">
@@ -22,29 +29,29 @@
                     </h2>
                 </div>
                 <div id="collapse{{competence.Id}}" aria-labelledby="heading{{competence.Id}}" class="panel-collapse collapse " ng-class="{
-                                        '' : competence.Id != Competences.DefaultSelect,
-                                        'in' : competence.Id == Competences.DefaultSelect
-                                     }">
+                                    '' : competence.Id != Competences.DefaultSelect,
+                                    'in' : competence.Id == Competences.DefaultSelect
+                                 }">
                     <div class="panel-body">
                         <div class="detail">
                             <div class="select-menu">
                                 <ul class="custom-bar nav nav-tabs nav-justified ">
                                     <li ng-class="{
-                                        'non-active' : competence.MenuActif != 0,
-                                        'active' : competence.MenuActif == 0
-                                     }" ng-click="competence.Change(0);">
+                                    'non-active' : competence.MenuActif != 0,
+                                    'active' : competence.MenuActif == 0
+                                 }" ng-click="competence.Change(0);">
                                         <a><b>Contexte</b></a>
                                     </li>
                                     <li ng-class="{
-                                        'non-active' : competence.MenuActif != 1,
-                                        'active' : competence.MenuActif == 1
-                                     }" ng-click="competence.Change(1);">
+                                    'non-active' : competence.MenuActif != 1,
+                                    'active' : competence.MenuActif == 1
+                                 }" ng-click="competence.Change(1);">
                                         <a><b>Description</b></a>
                                     </li>
                                     <li ng-class="{
-                                        'non-active' : competence.MenuActif != 2,
-                                        'active' : competence.MenuActif == 2
-                                     }" ng-click="competence.Change(2);">
+                                    'non-active' : competence.MenuActif != 2,
+                                    'active' : competence.MenuActif == 2
+                                 }" ng-click="competence.Change(2);">
                                         <a><b>Projets liées</b></a>
                                     </li>
                                 </ul>
@@ -82,6 +89,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>

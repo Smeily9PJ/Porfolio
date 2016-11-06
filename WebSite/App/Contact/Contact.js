@@ -47,7 +47,7 @@
                   console.log(response); // if you're into that sorta thing
               });*/
             
-            var nodemailer = require("nodemailer");
+        /*    var nodemailer = require("nodemailer");
 
             // create reusable transport method (opens pool of SMTP connections)
             var smtpTransport = nodemailer.createTransport("SMTP", {
@@ -77,7 +77,54 @@
 
                 // if you don't want to use this transport object anymore, uncomment following line
                 //smtpTransport.close(); // shut down the connection pool, no more messages
-            });
+            });*/
+
+            'use strict';
+
+            var nodemailer = require('nodemailer');
+            var transporter = nodemailer.createTransport();
+
+            /**
+             * Send an email when the contact from is submitted
+             */
+            exports.sendMail = function (req, res) {
+
+                var data = req.body;
+
+                transporter.sendMail({
+                    from: 'siclebree.fairway@hotmail.fr',
+                    to: 'siclebree.fairway@hotmail.fr',
+                    subject: 'Message from ds' ,
+                    text: 'dfg'
+                });
+
+                res.json(data);
+            };
+
+
+
+           /* $.ajax({
+                type: 'POST',
+                url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+                data: {
+                    'key': 'YOUR API KEY HERE',
+                    'message': {
+                        'from_email': 'siclebree.fairway@hotmail.fr',
+                        'to': [
+                            {
+                                'email': 'siclebree.fairway@hotmail.fr',
+                                'name': 'PELISSOU Julie',
+                                'type': 'to'
+                            }
+                        ],
+                        'autotext': 'true',
+                        'subject': 'YOUR SUBJECT HERE!',
+                        'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+                    }
+                }
+            }).done(function (response) {
+                console.log(response); // if you're into that sorta thing
+            });*/
         }
     }
 }

@@ -30,9 +30,7 @@ a {
   margin-top: -27px; }
   .custom-bar * {
     height: 25px !important;
-    padding-top: 2px;
-    border-top-left-radius: 50px !important;
-    border-top-right-radius: 50px !important; }
+    padding-top: 2px; }
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
   border-bottom: none !important;

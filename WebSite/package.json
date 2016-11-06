@@ -4,8 +4,8 @@
   "description": "travail intech",
   "main": "App.js",
   "dependencies": {
-    "node.js": "^0.0.0",
     "log4js": "^0.6.37",
+    "node.js": "^0.0.0",
     "nodemailer": "^2.4.2",
     "querystring": "^0.2.0"
   },

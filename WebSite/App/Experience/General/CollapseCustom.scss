@@ -1,0 +1,36 @@
+﻿@import 'Variables';
+
+.panel {
+    border-color: $border_color;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+
+    .panel-heading {
+        color: $text_color;
+        background-color: $border_color;
+        border-color: $border_color;
+
+        a {
+            display: inline-block;
+            width:100%;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+
+    .panel-heading:hover {
+        background-color: $border_color_black;
+        cursor: default;
+    }
+
+    .panel-body {
+        background-color: $background_color;
+    }
+
+    .panel-heading + .panel-collapse > .panel-body {
+        border-top-color: $border_color;
+    }
+}

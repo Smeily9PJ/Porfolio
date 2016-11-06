@@ -22,3 +22,7 @@
 
 .experience_page .liste, .competence_page .liste {
   height: 25px; }
+
+.experience_page .dropdown, .competence_page .dropdown {
+  width: 200px;
+  background-color: #211920; }
