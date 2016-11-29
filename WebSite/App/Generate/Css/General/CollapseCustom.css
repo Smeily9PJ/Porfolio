@@ -1,12 +1,19 @@
 /* Colors */
 /* Tailles */
 .panel {
-  border-color: #211920; }
+  border-color: #211920;
+  border-width: 2px;
+  border-radius: 10px; }
   .panel .panel-heading {
     color: white;
-    background-color: #230138;
     border-color: #211920; }
+    .panel .panel-heading a:hover {
+      color: white;
+      cursor: pointer; }
   .panel .panel-body {
-    background-color: #08050d; }
+    background-color: #262626 !important;
+    box-shadow: inset 0px 0px 20px 0px #211920 !important; }
+  .panel .panel-heading, .panel .panel {
+    background-color: #211920 !important; }
   .panel .panel-heading + .panel-collapse > .panel-body {
     border-top-color: #211920; }

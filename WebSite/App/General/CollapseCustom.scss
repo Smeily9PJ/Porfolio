@@ -2,15 +2,26 @@
 
 .panel {
     border-color: $border_color;
+    border-width: 2px;
+    border-radius: 10px;
 
     .panel-heading {
         color: $text_color;
-        background-color: $border_color_black;
         border-color: $border_color;
+
+        a:hover {
+            color : white;
+            cursor: pointer;
+        }
     }
 
-    .panel-body {
-        background-color: $background_color;
+     .panel-body {
+        background-color : $background_color_body !important;
+        box-shadow: inset 0px 0px 20px 0px $border_color !important;
+    }
+
+    .panel-heading, .panel {
+        background-color : $border_color !important;
     }
 
     .panel-heading + .panel-collapse > .panel-body {

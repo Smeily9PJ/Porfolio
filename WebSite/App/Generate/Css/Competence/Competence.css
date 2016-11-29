@@ -9,6 +9,9 @@
 .competence_page .title .checkbox-slider--b input:checked + span:before {
   background-color: #230138; }
 
+.competence_page .radio label, .competence_page .checkbox label {
+  padding-left: 32px; }
+
 .competence_page .toggle {
   padding-top: 20px;
   padding-left: 130px;
@@ -33,3 +36,12 @@
 .competence_page .checkbox-slider--b input + span:after {
   margin-top: 20px;
   margin-left: 260px; }
+
+.competence_page .progress-striped {
+  width: 20%; }
+
+.competence_page .progress-bar {
+  background-color: #230138; }
+
+.competence_page hr {
+  color: #211920; }

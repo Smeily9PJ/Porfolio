@@ -17,6 +17,10 @@
         }
     }
 
+    .radio label, .checkbox label {
+        padding-left: 32px;
+    }
+
     .toggle {
         padding-top: $padding_text*2;
         padding-left: 130px;
@@ -48,4 +52,18 @@
         margin-top: $padding_text*2;
         margin-left: 260px;
     }
+
+    
+    .progress-striped{
+        width: 20%;
+    }
+
+    .progress-bar {
+        background-color: $background_color_hover;
+    }
+
+    hr {
+        color: $border_color;
+    }
+
 }

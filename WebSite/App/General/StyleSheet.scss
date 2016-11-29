@@ -8,20 +8,24 @@
 
 
 body {
-    font-family: 'Lamina';
+    font-family: 'Arial';
     font-size: 12px;
     background-color: $background_color;
     color: $text_color;
 
     .header {
         height: $height_header;
-        background-image: url(../../../../Assets/imgBanniere.jpg);
+        //background-image: url(../../../../Assets/imgBanniere.jpg);
         background-repeat: no-repeat;
         background-position-x: center;
         text-align: left;
         font-weight: bold;
         font-size: 40px;
         border-bottom: 1px solid $border_color;
+
+        span {
+            margin: 10px;
+        }
 
         p.signature {
             padding-left: 100px;

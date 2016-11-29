@@ -5,19 +5,20 @@
   src: url("../../../../fonts/PolenticalNeonRegular.ttf"); }
 
 body {
-  font-family: 'Lamina';
+  font-family: 'Arial';
   font-size: 12px;
-  background-color: #08050d;
+  background-color: #15111b;
   color: white; }
   body .header {
-    height: 200px;
-    background-image: url(../../../../Assets/imgBanniere.jpg);
+    height: 80px;
     background-repeat: no-repeat;
     background-position-x: center;
     text-align: left;
     font-weight: bold;
     font-size: 40px;
     border-bottom: 1px solid #211920; }
+    body .header span {
+      margin: 10px; }
     body .header p.signature {
       padding-left: 100px;
       font-weight: normal;
@@ -27,7 +28,7 @@ body {
     padding-right: 10px; }
   body .body {
     border: 1px solid #211920;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     background-color: #262626; }
   body .main-content {
     padding-left: 10px;

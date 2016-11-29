@@ -12,72 +12,59 @@
     <p class="en-tete">Cliquer sur un libellé pour faire apparaitre le détail d'une compétence.</p>
 
     <div class="contenu">
-        <div ng-repeat="competence in Competences.Items" class="panel-group" id="accordion{{competence.Id}}">
+        <div class="panel-group" id="accordion0">
             <div class="panel panel-default">
-                <div class="panel-heading" id="heading{{competence.Id}}">
+                <div class="panel-heading" id="heading0">
                     <h2 class="panel-title">
-                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{competence.Id}}" data-target="#collapse{{competence.Id}}">
-                            {{competence.Name}}
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion0" data-target="#collapse0">
+                            AngularJS
                         </a>
                     </h2>
                 </div>
-                <div id="collapse{{competence.Id}}" aria-labelledby="heading{{competence.Id}}" class="panel-collapse collapse " ng-class="{
-                                        '' : competence.Id != Competences.DefaultSelect,
-                                        'in' : competence.Id == Competences.DefaultSelect
-                                     }">
+                <div id="collapse0" aria-labelledby="heading0" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <div class="detail">
-                            <div class="select-menu">
-                                <ul class="custom-bar nav nav-tabs nav-justified ">
-                                    <li ng-class="{
-                                        'non-active' : competence.MenuActif != 0,
-                                        'active' : competence.MenuActif == 0
-                                     }" ng-click="competence.Change(0);">
-                                        <a><b>Contexte</b></a>
-                                    </li>
-                                    <li ng-class="{
-                                        'non-active' : competence.MenuActif != 1,
-                                        'active' : competence.MenuActif == 1
-                                     }" ng-click="competence.Change(1);">
-                                        <a><b>Description</b></a>
-                                    </li>
-                                    <li ng-class="{
-                                        'non-active' : competence.MenuActif != 2,
-                                        'active' : competence.MenuActif == 2
-                                     }" ng-click="competence.Change(2);">
-                                        <a><b>Projets liées</b></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div ng-show="competence.MenuActif == 0">
-                                    <h3>Signication</h3>
-                                    <div>
-                                        {{competence.Contexte}}
-                                    </div>
-                                </div>
-                                <div ng-show="competence.MenuActif == 1">
-                                    <h3>Description</h3>
-                                    <div>
-                                        {{competence.Description}}
-                                    </div>
-                                </div>
-                                <div ng-show="competence.MenuActif == 2">
-                                    <h3>Projets liées</h3>
-                                    <div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">Projets</div>
-                                            <div class="panel-body">
-                                                <div class="liste" ng-repeat="projet in competence.Projets">
-                                                    <a ng-click="goProject(projet.Id)">
-                                                        {{projet.Libelle}}
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div>
+                            <h3>Angu... quoi ?</h3>
+                            definition....
+                        </div>
+                        <hr />
+                        <div>
+                            <h3>La théorie c'est bien mais concrètement ?</h3>
+                            . du simple affichage de données dans un tableau (données récupérées en base) jusqu'à l'affichage d'une courbe
+                            travail sur les performances au limites
+                            . customisation des fonctionnalitées offertes par l'outils
+                            . ajout d'extension de fonctionnalités trouvées sur le web
+                        </div>
+                        <hr />
+                        <div>
+                            <h3>Regard critique</h3>
+                            0
+                            <div class="progress progress-striped">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="10" style="width: 70%">
+                                    <span class="sr-only">7/10</span>
                                 </div>
                             </div>
+                            10
+                            <p>préciser échelle</p>
+                        </div>
+                        <hr />
+                        <div>
+                            <h3>Evolution</h3>
+                            ceci est un graphique, joli non ?
+                            2014	2015	2016	2017	2018
+                            0	5	7	8	9	(sur une echelle de 1 à 10)
+                            + desc pour plus tard
+                        </div>
+                        <hr />
+                        <div>
+                            <h3>Réalisation</h3>
+                            <ul>
+                                <li>vue frais</li>
+                                <li>pacte d'engagement</li>
+                                <li>TIME</li>
+                                <li>portfolio</li>
+                                <li>projet JDR ? (angular 2)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
