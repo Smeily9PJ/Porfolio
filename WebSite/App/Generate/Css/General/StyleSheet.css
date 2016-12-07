@@ -33,3 +33,6 @@ body {
   body .main-content {
     padding-left: 10px;
     padding-right: 10px; }
+  body hr {
+    border: solid 2px #211920;
+    border-radius: 10px; }

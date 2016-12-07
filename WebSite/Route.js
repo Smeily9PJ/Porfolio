@@ -15,8 +15,8 @@
           controller: ExperienceController
       })
       .state('Experience.detail', {
-          url: '/{refExperience}',
-          templateUrl: 'App/Experience/Experience.html',
+          url: '/{MeetingTracker}',
+          templateUrl: 'App/Experience/{MeetingTracker}.html',
           controller: ExperienceController
       })
       .state('Competence', {

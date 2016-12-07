@@ -1,9 +1,9 @@
 ﻿@import 'Variables';
 
 
-@font-face { 
-  font-family: 'Lamina'; 
-  src: url('../../../../fonts/PolenticalNeonRegular.ttf'); 
+@font-face {
+    font-family: 'Lamina';
+    src: url('../../../../fonts/PolenticalNeonRegular.ttf');
 }
 
 
@@ -48,5 +48,10 @@ body {
     .main-content {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    hr {
+        border: solid 2px $border_color;
+        border-radius: 10px;
     }
 }
