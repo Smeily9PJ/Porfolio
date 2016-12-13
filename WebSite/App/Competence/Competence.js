@@ -1,4 +1,6 @@
 ﻿function CompetenceController($scope, $state) {
+    $scope.Menu.Change(2);
+
     // Variable indiquant le type de compétences à afficher
     $scope.IsTechnique = false;
 
@@ -13,7 +15,7 @@
     };
 
     $scope.Techniques.AngularJS.Graphe.data = {
-        "ranges": [10],
+        "ranges": [0,8,10],
         "measures": [8],
         "markers": [8]
     }

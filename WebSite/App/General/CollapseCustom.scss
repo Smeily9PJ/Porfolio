@@ -9,9 +9,13 @@
         color: $text_color;
         border-color: $border_color;
 
+        &:hover {
+            cursor: pointer;
+            background-color : darken($border_color, 2%) !important;
+        }
+
         a:hover {
             color : white;
-            cursor: pointer;
         }
     }
 
