@@ -22,7 +22,9 @@
 
     $scope.GoTo = goTo;
     $scope.EtatAccordeons = etatAccordeons;
-
+    var goCompetence = function (refSwitch, refCompetence) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: refCompetence }); };
+    $scope.GoCompetenceTechnique = function (refCompetence) { goCompetence('T', refCompetence); };
+    $scope.GoCompetenceHumaine = function (refCompetence) { goCompetence('H', refCompetence); };
 /*var items = [
     getExperience1(),
     getExperience2()

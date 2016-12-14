@@ -4,7 +4,7 @@
     'use strict';
 
     // Init Angular
-    angular.module('app', ['ui.router', 'nvd3'])
+    angular.module('app', ['ui.router'])
     .config(['$controllerProvider',
                   function ($controllerProvider) {
                       $controllerProvider.allowGlobals();

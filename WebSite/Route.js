@@ -25,7 +25,7 @@
           controller: CompetenceController
       })
       .state('Competence.detail', {
-          url: '/{refSwitch}/{refCompetence}',
+          url: '#accordion{refSwitch}{refCompetence}',
           templateUrl: 'App/Competence/Competence.html',
           controller: CompetenceController
       })
