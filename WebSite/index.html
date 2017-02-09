@@ -41,7 +41,7 @@
     <div class="version">
         <p>Version : {{Menu.Version}}</p>
     </div>
-    <div class="body row">
+    <div class="body">
         <div class="row menu-onglet">
             <div class="col-md-8 col-md-offset-2">
                 <ul class="custom-bar nav nav-tabs nav-justified ">
@@ -54,8 +54,13 @@
                 </ul>
             </div>
         </div>
-        <div class="menu-button">
-            <button><i class="glyphicon glyphicon-th-list"></i></button>
+        <div class="menu-button" ng-click="Menu.AfficherMenuSpecial = !Menu.AfficherMenuSpecial">
+            <div ><i class="glyphicon glyphicon-th-list"></i></div>
+        </div>
+        <div ng-if="Menu.AfficherMenuSpecial == true">
+            <div class="menu-button-element" ng-repeat="menuItem in Menu.Items" ng-click="Menu.Change($index)">
+                <a href="{{menuItem.Href}}"><b>{{menuItem.Name}}</b></a>
+            </div>
         </div>
         <div>Contactez-moi</div>
         <div class="row">

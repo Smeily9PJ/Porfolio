@@ -30,6 +30,7 @@
     Menu.Items = items;
     var index = 0;
     Menu.Change = function (index) {
+        this.AfficherMenuSpecial = false;
         for (var i = 0; i < Menu.Items.length; i++) {
             if(i == index){
                 Menu.Items[i].Active = true;
