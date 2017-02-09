@@ -1,18 +1,21 @@
 ﻿@import 'Variables';
 
 /* tab color */
+.menu-button {
+    display: none;
+}
+
 .nav-tabs > li > a {
     background-color: $border_color;
     border: 1px solid $border_color !important;
     // border-bottom:none !important ;
     color: $text_color;
-
-   // box-shadow: inset 0px 10px 10px 3px $background_color_hover;
+    // box-shadow: inset 0px 10px 10px 3px $background_color_hover;
 }
 
 /* active tab color */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-     color: $text_color;
+    color: $text_color;
     background-color: $background_color_body;
     border-color: $border_color;
     border-bottom: none !important;
@@ -39,15 +42,31 @@ a {
 .custom-bar {
     margin-top: -27px;
 
+    a {
+        padding-top: 10px;
+    }
+
     & * {
         height: 25px !important;
         padding-top: 2px;
-        border-top-left-radius: 50px !important;
-        border-top-right-radius: 50px !important;
+        //border-top-left-radius: 50px !important;
+        //border-top-right-radius: 50px !important;
     }
 }
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
     border-bottom: none !important;
     border-color: $border_color;
+}
+
+
+// Pour les écrans trop petits pour afficher la page "normalement"
+@media all and (max-width:770px) {
+    .menu-button {
+        display:block !important;
+    }
+
+    .menu-onglet {
+        display:none !important;
+    }
 }

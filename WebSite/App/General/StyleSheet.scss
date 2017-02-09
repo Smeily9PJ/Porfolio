@@ -54,4 +54,15 @@ body {
         border: solid 2px $border_color;
         border-radius: 10px;
     }
+
+    li a {
+        &:hover {
+            cursor: pointer;
+            color: $text_color_hover;
+        }
+    }
+
+    .progress-bar {
+        background-color : $text_color_hover !important;
+    }
 }

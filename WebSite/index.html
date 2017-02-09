@@ -42,7 +42,7 @@
         <p>Version : {{Menu.Version}}</p>
     </div>
     <div class="body row">
-        <div class="row">
+        <div class="row menu-onglet">
             <div class="col-md-8 col-md-offset-2">
                 <ul class="custom-bar nav nav-tabs nav-justified ">
                     <li ng-repeat="menuItem in Menu.Items" ng-class="{
@@ -54,6 +54,10 @@
                 </ul>
             </div>
         </div>
+        <div class="menu-button">
+            <button><i class="glyphicon glyphicon-th-list"></i></button>
+        </div>
+        <div>Contactez-moi</div>
         <div class="row">
             <div class="main-content col-md-8 col-md-offset-2" ui-view></div>
         </div>
