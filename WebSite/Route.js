@@ -9,6 +9,11 @@
           templateUrl: 'App/Home/home.html',
           controller: HomeController
       })
+      .state('matrice', {
+          url: '/matrice',
+          templateUrl: 'App/Matrice/Matrice.html',
+          controller: MatriceController
+      })
       .state('Experience', {
           url: '/experience',
           templateUrl: 'App/Experience/Experience.html',

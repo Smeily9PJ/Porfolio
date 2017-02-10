@@ -13,6 +13,7 @@
     .config(Route)
     .controller('MenuController', MenuController)
     .controller('HomeController', HomeController)
+    .controller('MatriceController', MatriceController)
     .controller('CompetenceController', CompetenceController)
     .controller('ExperienceController', ExperienceController)
     .controller('LoisirController', LoisirController)
