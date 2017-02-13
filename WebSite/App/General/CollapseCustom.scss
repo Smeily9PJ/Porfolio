@@ -13,10 +13,6 @@
             cursor: pointer;
             background-color : darken($border_color, 2%) !important;
         }
-
-        a:hover {
-            color : $text_color_hover;
-        }
     }
 
      .panel-body {

@@ -1,4 +1,4 @@
-﻿function MenuController($scope) {
+﻿function MenuController($scope, $state) {
     var items = [
         {
             Name: "Accueil",
@@ -43,4 +43,7 @@
     Menu.Version = "0.1";
 
     $scope.Menu = Menu;
+
+    $scope.GoMatrice = function () { Menu.Change(-1); $state.go("matrice"); };
+    $scope.GoContact = function () { Menu.Change(4); $state.go("contact"); };
 }

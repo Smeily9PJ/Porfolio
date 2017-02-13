@@ -113,10 +113,6 @@ a {
 
         &:hover {
             cursor: pointer;
-            a {
-            color: $text_color_hover;
-            text-decoration: none;
-            }
         }
     }
 }

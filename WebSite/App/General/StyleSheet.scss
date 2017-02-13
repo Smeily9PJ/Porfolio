@@ -6,31 +6,62 @@
     src: url('../../../../fonts/PolenticalNeonRegular.ttf');
 }
 
+.glyphicon-envelope, .glyphicon-list {
+    margin-right: 10px;
+}
+
+.glyphicon-list {
+    //height:80px;
+}
+
+.button-fixe, .button-fixe:focus {
+    z-index:999;
+    font-size: large;
+    font-weight: bold;
+    position: fixed;
+    bottom: 5%;
+    background-color: $background_color_hover;
+    border-color: $background_color;
+    color: $text_color;
+
+    &:hover {
+        color: $text_color_hover;
+        background-color: $background_color_body;
+        border-color: $text_color_hover;
+    }
+}
+
+.button-contact {
+    width: 190px;
+    height: 50px;
+    right: 0px;
+    margin-right: -10px;
+}
+
+.button-matrice {
+    width: 170px;
+    height: 90px;
+    margin-left: -10px;
+    text-align: left;
+
+    div {
+        display: inline-block;
+    }
+}
 
 body {
+    margin-bottom: 100px;
     font-family: 'Arial';
     font-size: 12px;
     background-color: $background_color;
     color: $text_color;
 
-    .header {
-        height: $height_header;
-        //background-image: url(../../../../Assets/imgBanniere.jpg);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        text-align: left;
-        font-weight: bold;
-        font-size: 40px;
-        border-bottom: 1px solid $border_color;
+    .page-header {
+        margin-left: 10px;
+        border-bottom: none;
 
-        span {
-            margin: 10px;
-        }
-
-        p.signature {
-            padding-left: 100px;
-            font-weight: normal;
-            font-size: 30px;
+        small {
+            color: $text_color_hover;
         }
     }
 
@@ -55,14 +86,17 @@ body {
         border-radius: 10px;
     }
 
-    li a {
-        &:hover {
-            cursor: pointer;
-            color: $text_color_hover;
-        }
+    .progress-bar {
+        background-color: $text_color_hover !important;
     }
 
-    .progress-bar {
-        background-color : $text_color_hover !important;
+    a:hover {
+        color: $text_color_hover;
+        text-decoration: none;
     }
-} 
+
+    a:focus {
+        color: $text_color;
+        text-decoration: none;
+    }
+}
