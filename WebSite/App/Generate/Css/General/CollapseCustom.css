@@ -1,4 +1,5 @@
 /* Colors */
+/* Matrice color */
 /* Tailles */
 .panel {
   border-color: #211920;
@@ -10,8 +11,6 @@
     .panel .panel-heading:hover {
       cursor: pointer;
       background-color: #1b151a !important; }
-    .panel .panel-heading a:hover {
-      color: white; }
   .panel .panel-body {
     background-color: #262626 !important;
     box-shadow: inset 0px 0px 20px 0px #211920 !important; }

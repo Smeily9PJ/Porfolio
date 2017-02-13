@@ -1,28 +1,52 @@
 /* Colors */
+/* Matrice color */
 /* Tailles */
 @font-face {
   font-family: 'Lamina';
   src: url("../../../../fonts/PolenticalNeonRegular.ttf"); }
 
+.glyphicon-envelope, .glyphicon-list {
+  margin-right: 10px; }
+
+.button-fixe, .button-fixe:focus {
+  z-index: 999;
+  font-size: large;
+  font-weight: bold;
+  position: fixed;
+  bottom: 5%;
+  background-color: #230138;
+  border-color: #3b3b3b;
+  color: white; }
+  .button-fixe:hover, .button-fixe:focus:hover {
+    color: #b667bf;
+    background-color: #262626;
+    border-color: #b667bf; }
+
+.button-contact {
+  width: 190px;
+  height: 50px;
+  right: 0px;
+  margin-right: -10px; }
+
+.button-matrice {
+  width: 170px;
+  height: 90px;
+  margin-left: -10px;
+  text-align: left; }
+  .button-matrice div {
+    display: inline-block; }
+
 body {
+  margin-bottom: 100px;
   font-family: 'Arial';
   font-size: 12px;
-  background-color: #15111b;
+  background-color: #3b3b3b;
   color: white; }
-  body .header {
-    height: 80px;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    text-align: left;
-    font-weight: bold;
-    font-size: 40px;
-    border-bottom: 1px solid #211920; }
-    body .header span {
-      margin: 10px; }
-    body .header p.signature {
-      padding-left: 100px;
-      font-weight: normal;
-      font-size: 30px; }
+  body .page-header {
+    margin-left: 10px;
+    border-bottom: none; }
+    body .page-header small {
+      color: #b667bf; }
   body .version {
     float: right;
     padding-right: 10px; }
@@ -36,3 +60,11 @@ body {
   body hr {
     border: solid 2px #211920;
     border-radius: 10px; }
+  body .progress-bar {
+    background-color: #b667bf !important; }
+  body a:hover {
+    color: #b667bf;
+    text-decoration: none; }
+  body a:focus {
+    color: white;
+    text-decoration: none; }
