@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <link href="Library/bootstrap.css" rel="stylesheet">
     <link href="Library/titatoggle-dist.css" rel="stylesheet">
+
     <link href="App/Generate/Css/Competence/Competence.css" rel="stylesheet" type="text/css" />
     <link href="App/Generate/Css/Contact/Contact.css" rel="stylesheet" type="text/css" />
     <link href="App/Generate/Css/Experience/Experience.css" rel="stylesheet" type="text/css" />
@@ -15,16 +16,23 @@
     <link href="App/Generate/Css/Home/Home.css" rel="stylesheet" type="text/css" />
     <link href="App/Generate/Css/Loisir/Loisir.css" rel="stylesheet" type="text/css" />
     <link href="App/Generate/Css/Matrice/Matrice.css" rel="stylesheet" type="text/css" />
+
+    <!--http://dan-silver.github.io/ElementTransitions/-->
+    <link href="Library/elementTransitions.min.css" rel="stylesheet" type="text/css" />
+    <script src="Library/elementTransitions.min.js"></script>
+
     <script src="Library/jquery-2.2.3.js"></script>
     <script src="Library/bootstrap.js"></script>
     <script src="Library/require.js"></script>
     <script src="Library/angular.js"></script>
     <script src="Library/angular-ui-router.js"></script>
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
     <script src="https://rawgit.com/krispo/angular-nvd3/v1.0.4/dist/angular-nvd3.js"></script>-->
+
     <script src="Route.js"></script>
     <script src="app.js"></script>
     <script src="App/Competence/Competence.js"></script>
@@ -34,10 +42,25 @@
     <script src="App/Home/Home.js"></script>
     <script src="App/Loisir/Loisir.js"></script>
     <script src="App/Matrice/Matrice.js"></script>
+
+    <script>
+        // Pour activer tooltip et popover
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
 </head>
 <body ng-controller="MenuController">
-    <div class="page-header">
-        <h1>E-Portfolio <small>Julie Pélissou</small></h1>
+    <div class="header">
+        <div class="page-header">
+            <h1>E-Portfolio <small>Julie Pelissou</small></h1>
+        </div>
+        <div class="lampe">
+            <b class="glyphicon glyphicon-lamp" data-toggle="tooltip" data-placement="left" title="Un design lumineux ?"></b>
+        </div>
     </div>
     <div class="version">
         <p>Version : {{Menu.Version}}</p>
@@ -49,12 +72,13 @@
         <!-- Menu format onglets-->
         <div class="row menu-onglet">
             <div class="col-md-8 col-md-offset-2">
-                <ul class="custom-bar nav nav-tabs nav-justified ">
-                    <li ng-repeat="menuItem in Menu.Items" ng-class="{
+                <ul class="custom-bar nav nav-tabs nav-justified">
+                    <li
+                        ng-repeat="menuItem in Menu.Items" ng-class="{
                     '' : !menuItem.Active,
                     'active' : menuItem.Active
                  }">
-                        <a href="{{menuItem.Href}}" ng-click="Menu.Change($index)"><b>{{menuItem.Name}}</b></a>
+                        <a id="link-{{menuItem.Href}}" href="#/{{menuItem.Href}}" ng-click="Menu.Change($index)"><b>{{menuItem.Name}}</b></a>
                     </li>
                 </ul>
             </div>
@@ -90,9 +114,12 @@
         <!------------------
             Contenu principal de la page
         ------------------->
-        <div class="row">
-            <div class="main-content col-md-8 col-md-offset-2" ui-view></div>
+        <div class="et-wrapper et-rotate" et-in="rotateCubeBottomIn" et-out="rotateCubeBottomOut onTop">
+            <div class="row">
+                <div class="main-content col-md-8 col-md-offset-2" ui-view></div>
+            </div>
         </div>
+        
     </div>
 </body>
 </html>

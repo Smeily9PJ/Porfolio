@@ -6,6 +6,12 @@
     src: url('../../../../fonts/PolenticalNeonRegular.ttf');
 }
 
+@font-face {
+    font-family: 'Japane';
+    src: url('../../../../fonts/Japaneseb.ttf');
+}
+
+
 .glyphicon-envelope, .glyphicon-list {
     margin-right: 10px;
 }
@@ -15,7 +21,7 @@
 }
 
 .button-fixe, .button-fixe:focus {
-    z-index:999;
+    z-index: 999;
     font-size: large;
     font-weight: bold;
     position: fixed;
@@ -56,14 +62,34 @@ body {
     background-color: $background_color;
     color: $text_color;
 
-    .page-header {
-        margin-left: 10px;
-        border-bottom: none;
+    .header {
+        & > div {
+            display: inline-table;
+        }
 
-        small {
-            color: $text_color_hover;
+        .lampe {
+            float: right;
+            font-size: xx-large;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            padding-top: 40px;
+            padding-right: 40px;
+        }
+
+        .page-header {
+            font-family: 'Japane';
+            margin-left: 10px;
+            border-bottom: none;
+            margin-top: 5px;
+
+            small {
+                color: $text_color_hover;
+            }
         }
     }
+
+
 
     .version {
         float: right;

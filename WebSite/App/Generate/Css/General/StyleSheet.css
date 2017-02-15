@@ -5,6 +5,10 @@
   font-family: 'Lamina';
   src: url("../../../../fonts/PolenticalNeonRegular.ttf"); }
 
+@font-face {
+  font-family: 'Japane';
+  src: url("../../../../fonts/Japaneseb.ttf"); }
+
 .glyphicon-envelope, .glyphicon-list {
   margin-right: 10px; }
 
@@ -42,10 +46,22 @@ body {
   font-size: 12px;
   background-color: #3b3b3b;
   color: white; }
-  body .page-header {
+  body .header > div {
+    display: inline-table; }
+  body .header .lampe {
+    float: right;
+    font-size: xx-large;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding-top: 40px;
+    padding-right: 40px; }
+  body .header .page-header {
+    font-family: 'Japane';
     margin-left: 10px;
-    border-bottom: none; }
-    body .page-header small {
+    border-bottom: none;
+    margin-top: 5px; }
+    body .header .page-header small {
       color: #b667bf; }
   body .version {
     float: right;

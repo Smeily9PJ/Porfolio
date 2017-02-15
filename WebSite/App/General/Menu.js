@@ -2,27 +2,27 @@
     var items = [
         {
             Name: "Accueil",
-            Href: "#/home",
+            Href: "home",
             Active: true
         },
         {
             Name: "Expériences",
-            Href: "#/experience",
+            Href: "experience",
             Active: false
         },
         {
             Name: "Compétences",
-            Href: "#/competence",
+            Href: "competence",
             Active: false
         },
         {
             Name: "Activités extra-pro",
-            Href: "#/loisir",
+            Href: "loisir",
             Active: false
         },
         {
             Name: "Contact",
-            Href: "#/contact",
+            Href: "contact",
             Active: false
         }
     ];
