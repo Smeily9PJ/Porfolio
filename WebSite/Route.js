@@ -20,7 +20,7 @@
           controller: ExperienceController
       })
       .state('Experience.detail', {
-          url: '#accordion{refExperience}',
+          url: '#accordion{refSwitch}{refExperience}',
           templateUrl: 'App/Experience/Experience.html',
           controller: ExperienceController
       })

@@ -10,18 +10,19 @@
         border-color: $border_color;
 
         &:hover {
+            color: $text_color_hover;
             cursor: pointer;
-            background-color : darken($border_color, 2%) !important;
+            background-color: darken($border_color, 2%) !important;
         }
     }
 
-     .panel-body {
-        background-color : $background_color_body !important;
+    .panel-body {
+        background-color: $background_color_body !important;
         box-shadow: inset 0px 0px 20px 0px $border_color !important;
     }
 
     .panel-heading, .panel {
-        background-color : $border_color !important;
+        background-color: $border_color !important;
     }
 
     .panel-heading + .panel-collapse > .panel-body {

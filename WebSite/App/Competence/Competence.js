@@ -1,24 +1,18 @@
 ﻿function CompetenceController($scope, $state) {
     $scope.Menu.Change(2);
 
-
     var defaultCompetence = $state.params.refCompetence;
     var defaultSwitch = $state.params.refSwitch;
     $scope.IsTechnique = false;
     var etatAccordeons = new Array();
-    etatAccordeons["AngularJS"] = false;
-    etatAccordeons["Adaptabilite"] = false;
-
-
 
     var goTo = function (nomPage) {
-        var nomAccordeon = '#collapse' + nomPage;
         if (etatAccordeons[nomPage] == true) {
             // Fermer accordeon
-            $(nomAccordeon).collapse('hide');
+            $('#collapse' + nomPage).collapse('hide');
         } else {
             // Ouvrir accordeon
-            $(nomAccordeon).collapse('show');
+            $('#collapse' + nomPage).collapse('show');
         }
 
         etatAccordeons[nomPage] = !etatAccordeons[nomPage];
@@ -34,7 +28,7 @@
     $scope.GoTo = goTo;
     $scope.EtatAccordeons = etatAccordeons;
     // Pour gérer la courbe des notes
-    $scope.Techniques = {};
+   /* $scope.Techniques = {};
     $scope.Techniques.AngularJS = {};
     $scope.Techniques.AngularJS.Graphe = {};
     $scope.Techniques.AngularJS.Graphe.options = {
@@ -48,5 +42,5 @@
         "ranges": [0, 8, 10],
         "measures": [8],
         "markers": [8]
-    }
+    }*/
 }

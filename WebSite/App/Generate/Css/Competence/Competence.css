@@ -1,42 +1,67 @@
 /* Colors */
 /* Matrice color */
 /* Tailles */
-.competence_page .title > div {
+.experience_page .detail, .competence_page .detail {
+  padding-top: 10px; }
+
+.experience_page .en-tete, .competence_page .en-tete {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.experience_page .select-menu, .competence_page .select-menu {
+  width: 99.05%;
+  padding-top: 10px;
+  margin: auto;
+  margin-bottom: -1px; }
+
+.experience_page .content, .competence_page .content {
+  width: 99%;
+  background-color: #292929;
+  border: 1px solid #1a0c1b;
+  padding: 10px;
+  margin: auto; }
+
+.experience_page .liste, .competence_page .liste {
+  height: 25px; }
+
+.experience_page .title > div, .competence_page .title > div {
   display: inline-block; }
 
-.competence_page .title .checkbox-slider--b input + span:after {
+.experience_page .title .checkbox-slider--b input + span:after, .competence_page .title .checkbox-slider--b input + span:after {
   background-color: white; }
 
-.competence_page .title .checkbox-slider--b input:checked + span:before {
-  background-color: #230138; }
+.experience_page .title .checkbox-slider--b input:checked + span:before, .competence_page .title .checkbox-slider--b input:checked + span:before {
+  background-color: #2b132d; }
 
-.competence_page .radio label, .competence_page .checkbox label {
+.experience_page .radio label, .experience_page .checkbox label, .competence_page .radio label, .competence_page .checkbox label {
   padding-left: 32px; }
 
-.competence_page .toggle {
+.experience_page .toggle, .competence_page .toggle {
   padding-top: 20px;
   padding-left: 130px;
   width: 500px; }
-  .competence_page .toggle span {
+  .experience_page .toggle span, .competence_page .toggle span {
     margin-left: 5px;
     margin-right: 5px; }
 
-.competence_page .radio label, .competence_page .checkbox label {
+.experience_page .radio label, .experience_page .checkbox label, .competence_page .radio label, .competence_page .checkbox label {
   font-weight: bold;
   font-size: large; }
 
-.competence_page .checkbox-slider--b input + span:before {
+.experience_page .checkbox-slider--b input + span:before, .competence_page .checkbox-slider--b input + span:before {
   margin-left: 260px; }
 
-.competence_page .checkbox-slider--b input:checked + span:after,
+.experience_page .checkbox-slider--b input:checked + span:after,
+.experience_page .checkbox-slider--b input:checked + span:after, .competence_page .checkbox-slider--b input:checked + span:after,
 .competence_page .checkbox-slider--b input:checked + span:after {
   margin-top: 20px;
   margin-left: 280px; }
 
-.competence_page .checkbox-slider--b input + span:after,
+.experience_page .checkbox-slider--b input + span:after,
+.experience_page .checkbox-slider--b input + span:after, .competence_page .checkbox-slider--b input + span:after,
 .competence_page .checkbox-slider--b input + span:after {
   margin-top: 20px;
   margin-left: 260px; }
 
-.competence_page .progress {
+.experience_page .progress, .competence_page .progress {
   width: 20%; }

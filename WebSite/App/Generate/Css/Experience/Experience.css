@@ -1,25 +1,30 @@
 /* Colors */
 /* Matrice color */
 /* Tailles */
-.experience_page .detail, .competence_page .detail {
-  padding-top: 10px; }
+.experience_page .radio label, .experience_page .checkbox label {
+  padding-left: 32px; }
 
-.experience_page .en-tete, .competence_page .en-tete {
-  padding-top: 10px;
-  padding-bottom: 10px; }
+.experience_page .toggle {
+  padding-top: 20px;
+  padding-left: 130px;
+  width: 500px; }
+  .experience_page .toggle span {
+    margin-left: 5px;
+    margin-right: 5px; }
 
-.experience_page .select-menu, .competence_page .select-menu {
-  width: 99.05%;
-  padding-top: 10px;
-  margin: auto;
-  margin-bottom: -1px; }
+.experience_page .radio label, .experience_page .checkbox label {
+  font-weight: bold;
+  font-size: large; }
 
-.experience_page .content, .competence_page .content {
-  width: 99%;
-  background-color: #262626;
-  border: 1px solid #211920;
-  padding: 10px;
-  margin: auto; }
+.experience_page .checkbox-slider--b input + span:before {
+  margin-left: 280px; }
 
-.experience_page .liste, .competence_page .liste {
-  height: 25px; }
+.experience_page .checkbox-slider--b input:checked + span:after,
+.experience_page .checkbox-slider--b input:checked + span:after {
+  margin-top: 20px;
+  margin-left: 300px; }
+
+.experience_page .checkbox-slider--b input + span:after,
+.experience_page .checkbox-slider--b input + span:after {
+  margin-top: 20px;
+  margin-left: 280px; }

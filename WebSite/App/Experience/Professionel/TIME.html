@@ -1,14 +1,14 @@
-﻿<div class="panel-group" id="accordionTIME" aria-multiselectable="false" role="tablist">
+﻿<div class="panel-group" id="accordionPTIME" aria-multiselectable="false" role="tablist">
     <div class="panel panel-default">
-        <div class="panel-heading" id="headingTIME" role="tab" ng-click="GoTo('TIME')">
+        <div class="panel-heading" id="headingPTIME" role="tab" ng-click="GoTo('PTIME')">
             <h2 class="panel-title">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionTIME"
-                   expanded="true" data-target="#collapseTIME" aria-controls="collapseTIME">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionPTIME"
+                   expanded="true" data-target="#collapsePTIME" aria-controls="collapsePTIME">
                     Professionel - TIME
                 </a>
             </h2>
         </div>
-        <div id="collapseTIME" aria-labelledby="headingTIME" class="panel-collapse collapse">
+        <div id="collapsePTIME" aria-labelledby="headingPTIME" class="panel-collapse collapse">
             <div class="panel-body">
                 <div>
                     <h3>{titre}</h3>
@@ -36,10 +36,24 @@
                     <h4>Les compétences humaines</h4>
                     <ul>
                         <li><a ng-click="GoCompetenceHumaine('Adaptabilite')">Adaptabilité</a></li>
+                        <li><a ng-click="GoCompetenceHumaine('Autonomie')">Autonomie</a></li>
+                        <li><a ng-click="GoCompetenceHumaine('Curiosite')">Curiosité</a></li>
+                        <li><a ng-click="GoCompetenceHumaine('Serieux')">Sérieux</a></li>
+                        <li><a ng-click="GoCompetenceHumaine('Sociabilite')">Sociabilité</a></li>
                     </ul>
                     <h4>Les compétences techniques</h4>
                     <ul>
                         <li><a ng-click="GoCompetenceTechnique('AngularJS')">AngularJS</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('BDD')">Base de données</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('Chiffrage')">Chiffrage</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('CSharp')">C#</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('CSS')">CSS/SASS</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('Documentation')">Documentation</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('HTML')">HTML</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('JsTs')">Javascript/Typescript</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('Log4Net')">Log4Net</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('PlanDeTests')">Plan de tests</a></li>
+                        <li><a ng-click="GoCompetenceTechnique('WebApi')">Web Api</a></li>
                     </ul>
                 </div>
             </div>

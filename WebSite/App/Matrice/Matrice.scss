@@ -21,7 +21,7 @@ $height_row: 35px;
     #table-2D {
         position: relative;
         padding: 10px;
-        width: 960px;
+        width: 990px;
         height: 403px;
         padding-bottom: 0px;
         padding-top: 0px;
@@ -48,11 +48,11 @@ $height_row: 35px;
             }
 
             border-bottom: 1px $text_color solid;
+ 
         }
 
         .col2 {
-            left: $width_row_header;
-            // left: 141px;
+            left: $width_row_header + 30px;
             right: 0;
         }
 
@@ -99,8 +99,11 @@ $height_row: 35px;
 
         .clickable:hover, .clickable:active {
             background-color: $background_color_body !important;
-            color: $text_color_hover;
             cursor: pointer;
+
+            a {
+                color: $text_color_hover;
+            }
         }
 
         td {
@@ -118,14 +121,20 @@ $height_row: 35px;
             min-width: $width_row;
             max-width: $width_row;
             padding: 5px;
+
         }
+
+         
 
         .diagonal-separator {
             height: $height_col_header;
+            min-width: $width_row_header + 30px !important;
+            max-width: $width_row_header + 30px !important;
+
             background: linear-gradient(to right top, $background_color 0%, $background_color 49.9%, $text_color 50.3%, $text_color 50.7%, $background_color 51.1%, $background_color 100%);
 
             div {
-                transform: rotate(38deg);
+                transform: rotate(35deg);
                 height: 20px;
                 margin: 15px;
             }
@@ -154,6 +163,15 @@ $height_row: 35px;
         height: 37px;
     }
 
+
+    .competence-rowspan {
+        max-width: 30px !important;
+
+        * {
+            writing-mode: vertical-rl !important;
+        }
+    }
+
     .green-cell {
         background-color: $matrice_green !important;
         color: darken($matrice_green, 15%);
@@ -177,5 +195,31 @@ $height_row: 35px;
     .shadow-level3 {
         z-index: 100;
         box-shadow: 4px 0px 7px -1px $background_color_body;
+    }
+
+    .legende {
+        th, td {
+            height: 30px;
+            border: 1px solid $text_color;
+            padding-right : 5px;
+            background-color : $background_color;
+        }
+
+        th {
+           text-align:center;
+        }
+
+        td {
+            text-align:right;
+        }
+
+        .desc {
+            width : 285px;
+        }
+
+        .green-cell, .red-cell {
+           text-align:center;
+            width: 50px;
+        }
     }
 }

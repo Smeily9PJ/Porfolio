@@ -1,8 +1,9 @@
 ﻿function ExperienceController($scope, $state) {
     $scope.Menu.Change(1);
     var defaultProjet = $state.params.refExperience;
+    var defaultSwitch = $state.params.refSwitch;
     var etatAccordeons = new Array();
-    etatAccordeons["VueFrais"] = false;
+    $scope.IsEtudiant = false;
     
     var goTo = function (nomPage) {
         if (etatAccordeons[nomPage] == true) {
@@ -15,16 +16,20 @@
 
         etatAccordeons[nomPage] = !etatAccordeons[nomPage];
     };
+    if (defaultSwitch != undefined && defaultSwitch != null) {
 
-    if (defaultProjet != undefined && defaultProjet != null) {
-        setTimeout(function () { goTo(defaultProjet); }, 1000);
+        if (defaultProjet != undefined && defaultProjet != null) {
+            $scope.IsTechnique = defaultSwitch == 'P';
+
+            setTimeout(function () { goTo(defaultSwitch + defaultProjet); }, 1000);
+        }
     }
 
     $scope.GoTo = goTo;
     $scope.EtatAccordeons = etatAccordeons;
-    var goCompetence = function (refSwitch, refCompetence) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: refCompetence }); };
+   /* var goCompetence = function (refSwitch, refCompetence) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: refCompetence }); };
     $scope.GoCompetenceTechnique = function (refCompetence) { goCompetence('T', refCompetence); };
-    $scope.GoCompetenceHumaine = function (refCompetence) { goCompetence('H', refCompetence); };
+    $scope.GoCompetenceHumaine = function (refCompetence) { goCompetence('H', refCompetence); };*/
 /*var items = [
     getExperience1(),
     getExperience2()

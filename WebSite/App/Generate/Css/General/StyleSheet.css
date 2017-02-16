@@ -9,53 +9,74 @@
   font-family: 'Japane';
   src: url("../../../../fonts/Japaneseb.ttf"); }
 
-.glyphicon-envelope, .glyphicon-list {
-  margin-right: 10px; }
+/* The animation code */
+@keyframes show {
+  from {
+    padding-top: 30px;
+    padding-right: 40px;
+    font-size: 38px; }
+  to {
+    padding-top: 28px;
+    padding-right: 38px;
+    font-size: 40px; } }
 
-.button-fixe, .button-fixe:focus {
-  z-index: 999;
-  font-size: large;
-  font-weight: bold;
-  position: fixed;
-  bottom: 5%;
-  background-color: #230138;
-  border-color: #3b3b3b;
-  color: white; }
-  .button-fixe:hover, .button-fixe:focus:hover {
-    color: #b667bf;
-    background-color: #262626;
-    border-color: #b667bf; }
+@keyframes rotation-lampe {
+  from {
+    -webkit-transform: rotateY(0); }
+  to {
+    -webkit-transform: rotateY(-360deg); } }
 
-.button-contact {
-  width: 190px;
-  height: 50px;
-  right: 0px;
-  margin-right: -10px; }
+@keyframes transition-menu-in {
+  0% {
+    opacity: .3;
+    -webkit-transform: translateY(-100%) rotateX(90deg); }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg); } }
 
-.button-matrice {
-  width: 170px;
-  height: 90px;
-  margin-left: -10px;
-  text-align: left; }
-  .button-matrice div {
-    display: inline-block; }
+@keyframes transition-menu-out {
+  50% {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg); }
+  100% {
+    opacity: .3;
+    -webkit-transform: translateY(100%) rotateX(-90deg); } }
+
+/* The element to apply the animation to */
+.i-m-here {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse; }
+
+.do-a-roll {
+  animation-name: show;
+  animation-duration: 1s;
+  animation-iteration-count: 1; }
+
+.main-content.ng-leave {
+  transform-origin: 50% 0%;
+  animation: transition-menu-out .6s both ease-in; }
+
+.main-content.ng-enter {
+  transform-origin: 50% 100%;
+  animation: transition-menu-in .6s both ease-in; }
 
 body {
   margin-bottom: 100px;
   font-family: 'Arial';
-  font-size: 12px;
+  font-size: 15px;
   background-color: #3b3b3b;
-  color: white; }
+  color: white;
+  /* Before menu, bandeau */ }
   body .header > div {
     display: inline-table; }
   body .header .lampe {
     float: right;
-    font-size: xx-large;
+    font-size: 38px;
     width: 100px;
     height: 100px;
-    margin: auto;
-    padding-top: 40px;
-    padding-right: 40px; }
+    margin: auto; }
   body .header .page-header {
     font-family: 'Japane';
     margin-left: 10px;
@@ -67,20 +88,61 @@ body {
     float: right;
     padding-right: 10px; }
   body .body {
-    border: 1px solid #211920;
+    border: 1px solid #1a0c1b;
     padding-bottom: 40px;
-    background-color: #262626; }
+    background-color: #292929; }
+  body main {
+    overflow: hidden; }
   body .main-content {
     padding-left: 10px;
     padding-right: 10px; }
   body hr {
-    border: solid 2px #211920;
+    border: solid 2px #1a0c1b;
     border-radius: 10px; }
   body .progress-bar {
     background-color: #b667bf !important; }
   body a:hover {
     color: #b667bf;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
   body a:focus {
     color: white;
     text-decoration: none; }
+
+/* Boutons fixes */
+.glyphicon-envelope, .glyphicon-list {
+  margin-right: 10px; }
+
+.glyphicon-list {
+  top: -23px; }
+
+.button-fixe, .button-fixe:focus {
+  z-index: 999;
+  font-size: large;
+  font-weight: bold;
+  position: fixed;
+  bottom: 5%;
+  background-color: #2b132d;
+  border-color: #3b3b3b;
+  color: white; }
+  .button-fixe:hover, .button-fixe:focus:hover {
+    color: #b667bf;
+    background-color: #292929;
+    border-color: #b667bf; }
+
+.button-contact {
+  width: 180px;
+  height: 40px;
+  right: 0px;
+  margin-right: -10px;
+  padding-left: 0px; }
+
+.button-matrice {
+  width: 170px;
+  height: 90px;
+  margin-left: -8px;
+  text-align: left; }
+  .button-matrice .marge {
+    min-height: 20px; }
+  .button-matrice div {
+    display: inline-block; }

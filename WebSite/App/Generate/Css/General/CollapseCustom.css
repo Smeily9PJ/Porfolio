@@ -2,19 +2,20 @@
 /* Matrice color */
 /* Tailles */
 .panel {
-  border-color: #211920;
+  border-color: #1a0c1b;
   border-width: 2px;
   border-radius: 10px; }
   .panel .panel-heading {
     color: white;
-    border-color: #211920; }
+    border-color: #1a0c1b; }
     .panel .panel-heading:hover {
+      color: #b667bf;
       cursor: pointer;
-      background-color: #1b151a !important; }
+      background-color: #130914 !important; }
   .panel .panel-body {
-    background-color: #262626 !important;
-    box-shadow: inset 0px 0px 20px 0px #211920 !important; }
+    background-color: #292929 !important;
+    box-shadow: inset 0px 0px 20px 0px #1a0c1b !important; }
   .panel .panel-heading, .panel .panel {
-    background-color: #211920 !important; }
+    background-color: #1a0c1b !important; }
   .panel .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #211920; }
+    border-top-color: #1a0c1b; }

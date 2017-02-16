@@ -1,6 +1,8 @@
 ﻿<div class="matrice" ng-controller="MatriceController">
-    <h1>Matrice des projets et des compétences (humaines et techniques)</h1>
-
+    <h1>Matrice des projets et des compétences</h1>
+    <p>
+        Cliquer sur un libellé de projet ou de compétence pour accéder à son descriptif.
+    </p>
     <div id="table-2D">
         <div id="wrapper" tabindex="0">
             <div class="cell col1 row1 shadow-level1">
@@ -25,10 +27,11 @@
                         <thead>
                             <tr>
                                 <th class="th-clickable clickable"
-                                   ng-repeat="projet in Projets"
+                                    ng-repeat="projet in Projets"
                                     unselectable="on"
-                                    onselectstart="return false;">
-                                    <div><a ng-click="GoProjet(projet.Lien)">{{projet.Nom}}</a></div>
+                                    onselectstart="return false;"
+                                    ng-click="GoProjet(projet.Type, projet.Lien)">
+                                    <div><a>{{projet.Nom}}</a></div>
                                 </th>
                             </tr>
                         </thead>
@@ -39,11 +42,42 @@
                 <div id="col">
                     <table>
                         <tbody>
-                            <tr ng-repeat="competence in CompetencesHumaines">
+                            <tr>
+                                <td class="competence-rowspan" rowspan="{{CompetencesHumaines.length}}">
+                                    <div>HUMAINES</div>
+                                </td>
                                 <td class="td-clickable clickable"
                                     unselectable="on"
-                                    onselectstart="return false;">
-                                    <div><a ng-click="GoCompetence(competence.Type, competence.Lien)">{{competence.Nom}}</a></div>
+                                    onselectstart="return false;"
+                                    ng-click="GoCompetence('H', CompetencesHumaines[0].Lien)">
+                                    <div><a>{{CompetencesHumaines[0].Nom}}</a></div>
+                                </td>
+                            </tr>
+                            <tr class="liste-comp-humaine" ng-repeat="competence in CompetencesHumaines" ng-if="!$first">
+                                <td class="td-clickable clickable"
+                                    unselectable="on"
+                                    onselectstart="return false;"
+                                    ng-click="GoCompetence('H', competence.Lien)">
+                                    <div><a>{{competence.Nom}}</a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="competence-rowspan" rowspan="{{CompetencesTechniques.length}}">
+                                    <div>TECHNIQUES</div>
+                                </td>
+                                <td class="td-clickable clickable"
+                                    unselectable="on"
+                                    onselectstart="return false;"
+                                    ng-click="GoCompetence('T', CompetencesTechniques[0].Lien)">
+                                    <div><a>{{CompetencesTechniques[0].Nom}}</a></div>
+                                </td>
+                            </tr>
+                            <tr class="liste-comp-technique" ng-repeat="competence in CompetencesTechniques" ng-if="!$first">
+                                <td class="td-clickable clickable"
+                                    unselectable="on"
+                                    onselectstart="return false;"
+                                    ng-click="GoCompetence('T', competence.Lien)">
+                                    <div><a>{{competence.Nom}}</a></div>
                                 </td>
                             </tr>
                         </tbody>
@@ -54,14 +88,32 @@
                 <table>
                     <tbody>
                         <tr ng-repeat="ligne in Contenu track by $index">
-                            <td table-central ng-repeat="colonne in ligne  track by $index"  ng-class="{'green-cell' : colonne == 1, 'red-cell' : colonne == 0}">
+                            <td table-central ng-repeat="colonne in ligne  track by $index" ng-class="{'green-cell' : colonne == 1, 'red-cell' : colonne == 0}">
                                 <span ng-class="{'glyphicon glyphicon-ok' : colonne == 1, 'glyphicon glyphicon-remove' : colonne == 0}"></span>
                             </td>
-                        </tr>                       
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+
+    <div class="legende">
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="2">Légende</th>
+                </tr>
+                <tr>
+                    <td class="desc">Compétence utilisée dans le projet</td>
+                    <td class="green-cell"><span class="glyphicon glyphicon-ok"></span></td>
+                </tr>
+                <tr>
+                    <td class="desc">Compétence non utilisée dans le projet</td>
+                    <td class="red-cell"><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 

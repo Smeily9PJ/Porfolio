@@ -1,6 +1,10 @@
 /* Colors */
 /* Matrice color */
 /* Tailles */
+.home_page .glyphicon-road {
+  font-size: xx-large;
+  margin: 3px; }
+
 .home_page .description {
   padding-top: 10px;
   padding-bottom: 10px; }
