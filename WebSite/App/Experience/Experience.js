@@ -16,10 +16,11 @@
 
         etatAccordeons[nomPage] = !etatAccordeons[nomPage];
     };
+
     if (defaultSwitch != undefined && defaultSwitch != null) {
 
         if (defaultProjet != undefined && defaultProjet != null) {
-            $scope.IsTechnique = defaultSwitch == 'P';
+            $scope.IsEtudiant = defaultSwitch == 'E';
 
             setTimeout(function () { goTo(defaultSwitch + defaultProjet); }, 1000);
         }
@@ -27,17 +28,5 @@
 
     $scope.GoTo = goTo;
     $scope.EtatAccordeons = etatAccordeons;
-   /* var goCompetence = function (refSwitch, refCompetence) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: refCompetence }); };
-    $scope.GoCompetenceTechnique = function (refCompetence) { goCompetence('T', refCompetence); };
-    $scope.GoCompetenceHumaine = function (refCompetence) { goCompetence('H', refCompetence); };*/
-/*var items = [
-    getExperience1(),
-    getExperience2()
-];
 
-var Experiences = {};
-Experiences.Items = items;
-Experiences.DefaultProject = $state.params.refExperience;
-$scope.Experiences = Experiences;
-$scope.goCompetence = function (refSwitch, index) { $state.go("Competence.detail", { refSwitch: refSwitch, refCompetence: index }); };*/
 }

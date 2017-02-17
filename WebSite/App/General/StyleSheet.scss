@@ -1,5 +1,33 @@
 ﻿@import 'Variables';
 
+
+
+#picContainer {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.pic {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+}
+
+#pic01 {
+  background-image: url('http://lorempixel.com/300/600/city');
+}
+#pic02 {
+  background-image: url('http://lorempixel.com/300/600/cats');
+  opacity: 0;
+}
+
+
+
+
+
+
 @font-face {
     font-family: 'Lamina';
     src: url('../../../../fonts/PolenticalNeonRegular.ttf');
@@ -82,7 +110,6 @@
     transform-origin: 50% 100%;
     animation: transition-menu-in .6s both ease-in;
 }
-
 
 body {
     margin-bottom: 100px;

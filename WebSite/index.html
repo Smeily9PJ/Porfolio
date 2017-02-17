@@ -29,6 +29,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
     <script src="https://rawgit.com/krispo/angular-nvd3/v1.0.4/dist/angular-nvd3.js"></script>-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
     <script src="Route.js"></script>
     <script src="app.js"></script>
@@ -55,14 +57,14 @@
         <div class="page-header">
             <h1>E-Portfolio <small>Julie Pelissou</small></h1>
         </div>
-        <div class="lampe" ng-click="ChangeStyle()">
+        <!--<div class="lampe" ng-click="ChangeStyle()">
             <b class="glyphicon glyphicon-lamp i-m-here" data-toggle="tooltip" data-placement="left" title="Un design lumineux ?"></b>
-        </div>
+        </div>-->
     </div>
     <div class="version">
         <p>Version : {{Menu.Version}}</p>
     </div>
-    <div class="body">
+    <div class="body" ng-class="{'rotate' : rotate == true, '' : rotate == false}" ng-mousedown="Rotate = true" ng-mouseup="Rotate = false">
         <!------------------
             Menus/Onglets
         ------------------->
@@ -103,10 +105,10 @@
             <div>Matrice<br />Projets -<br />Compétences</div>
         </button>
 
-        <!-- Pour le contact, à droite -->
+        <!-- Pour le contact, à droite 
         <button type="button" class="btn btn-default button-fixe button-contact" ng-click="GoContact()">
             <span class="glyphicon glyphicon-envelope"></span><span>Contactez-moi</span>
-        </button>
+        </button>-->
 
 
         <!------------------

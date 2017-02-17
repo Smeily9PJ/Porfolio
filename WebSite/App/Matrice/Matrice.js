@@ -26,7 +26,7 @@
     }, {
         Nom: "Gestion des tags",
         Lien: "GestionTags",
-        Type: 'E'
+        Type: 'P'
     }, {
         Nom: "Meeting Tracker",
         Lien: "MeetingTracker",

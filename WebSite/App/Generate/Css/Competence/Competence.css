@@ -31,7 +31,7 @@
   background-color: white; }
 
 .experience_page .title .checkbox-slider--b input:checked + span:before, .competence_page .title .checkbox-slider--b input:checked + span:before {
-  background-color: #2b132d; }
+  background-color: #b667bf; }
 
 .experience_page .radio label, .experience_page .checkbox label, .competence_page .radio label, .competence_page .checkbox label {
   padding-left: 32px; }
